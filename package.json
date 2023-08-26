@@ -6,6 +6,10 @@
 	"publisher": "wasm-fmt",
 	"version": "0.0.1",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wasm-fmt/wasm-fmt-vscode.git"
+	},
 	"engines": {
 		"vscode": "^1.81.0"
 	},
@@ -45,5 +49,17 @@
 		"@wasm-fmt/clang-format": "^0.1.0",
 		"@wasm-fmt/gofmt": "^0.4.0",
 		"@wasm-fmt/ruff_fmt": "^0.2.1"
-	}
+	},
+	"keywords": [
+		"prettier",
+		"formatter",
+		"c",
+		"cpp",
+		"go",
+		"java",
+		"javascript",
+		"typescript",
+		"json",
+		"csharp"
+	]
 }
