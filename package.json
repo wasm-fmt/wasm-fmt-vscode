@@ -1,0 +1,49 @@
+{
+	"name": "wasm-fmt",
+	"displayName": "wasm-fmt",
+	"description": "Code Formatter powered by WebAssembly",
+	"author": "magic-akari",
+	"publisher": "wasm-fmt",
+	"version": "0.0.1",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.81.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"activationEvents": [
+		"onLanguage:c",
+		"onLanguage:cpp",
+		"onLanguage:csharp",
+		"onLanguage:go",
+		"onLanguage:java",
+		"onLanguage:javascript",
+		"onLanguage:json",
+		"onLanguage:jsonc",
+		"onLanguage:objective-c",
+		"onLanguage:objective-cpp",
+		"onLanguage:python",
+		"onLanguage:typescript",
+		"onLanguage:proto"
+	],
+	"browser": "./out/extension.js",
+	"contributes": {},
+	"scripts": {
+		"vscode:prepublish": "pnpm run compile",
+		"compile": "./esbuild.mjs",
+		"watch": "./esbuild.mjs --watch",
+		"run:browser": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. ."
+	},
+	"devDependencies": {
+		"@types/node": "^20.5.6",
+		"@types/vscode": "^1.81.0",
+		"@vscode/test-web": "^0.0.45",
+		"esbuild": "^0.19.2"
+	},
+	"dependencies": {
+		"@wasm-fmt/clang-format": "^0.1.0",
+		"@wasm-fmt/gofmt": "^0.4.0",
+		"@wasm-fmt/ruff_fmt": "^0.2.1"
+	}
+}
