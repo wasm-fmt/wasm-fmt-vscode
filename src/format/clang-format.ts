@@ -28,9 +28,11 @@ export function formattingSubscription() {
 			const text = document.getText();
 
 			const IndentWidth = options.tabSize;
+			const TabWidth = options.tabSize;
+
 			const UseTab = options.insertSpaces ? "Never" : "ForIndentation";
 
-			const style = JSON.stringify({ BasedOnStyle: "Chromium", IndentWidth, UseTab });
+			const style = JSON.stringify({ BasedOnStyle: "Chromium", IndentWidth, TabWidth, UseTab });
 
 			const formatted = clang_format(text, assumeFilename, style);
 
