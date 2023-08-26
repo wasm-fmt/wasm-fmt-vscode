@@ -31,5 +31,9 @@ if (process.argv.includes("--watch")) {
 		process.exit(0);
 	});
 } else {
+	if (process.argv.includes("--minify")) {
+		options.minify = true;
+	}
+
 	await esbuild.build(options);
 }
