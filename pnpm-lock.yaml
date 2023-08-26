@@ -5,8 +5,8 @@ dependencies:
     specifier: ^0.1.1
     version: 0.1.1
   '@wasm-fmt/gofmt':
-    specifier: ^0.4.0
-    version: 0.4.0
+    specifier: ^0.4.1
+    version: 0.4.1
   '@wasm-fmt/ruff_fmt':
     specifier: ^0.2.1
     version: 0.2.1
@@ -277,8 +277,8 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: false
 
-  /@wasm-fmt/gofmt@0.4.0:
-    resolution: {integrity: sha512-siAp4mga4EEm2lybbQ3eHrWB/IanFMJXUIm6bQUw1O9Gscr744/29FEwH2Z76ALK7G9MwyMBRGRkJl4njy8NOQ==}
+  /@wasm-fmt/gofmt@0.4.1:
+    resolution: {integrity: sha512-uYFkYgbgQCH9RlTDq4uklbE1ZLptk5zrJjpHXDWp9deFl0nMIA+JSaq4Ky+hIxAA79yGFaCJJ3CtDWtSsel9oQ==}
     engines: {node: '>=16.17.0'}
     dev: false
 

@@ -1,5 +1,5 @@
 import go_init, { format as gofmt } from "@wasm-fmt/gofmt";
-import go_wasm from "@wasm-fmt/gofmt/lib.wasm";
+import go_wasm from "@wasm-fmt/gofmt/gofmt.wasm";
 import * as vscode from "vscode";
 
 export default async function init(context: vscode.ExtensionContext) {

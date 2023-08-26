@@ -32,7 +32,7 @@ export function formattingSubscription() {
 
 			const style = JSON.stringify({ BasedOnStyle: "Chromium", IndentWidth, UseTab });
 
-			const formatted = clang_format(text, assumeFilename, style) as unknown as string;
+			const formatted = clang_format(text, assumeFilename, style);
 
 			const range = document.validateRange(
 				new vscode.Range(document.positionAt(0), document.positionAt(text.length)),

@@ -3,7 +3,7 @@ declare module "@wasm-fmt/ruff_fmt/ruff_fmt_bg.wasm" {
 	export default wasm;
 }
 
-declare module "@wasm-fmt/gofmt/lib.wasm" {
+declare module "@wasm-fmt/gofmt/gofmt.wasm" {
 	const wasm: string;
 	export default wasm;
 }
