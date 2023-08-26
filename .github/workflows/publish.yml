@@ -1,0 +1,40 @@
+name: Publish
+
+on:
+    create:
+        tags:
+            - "v*"
+
+jobs:
+    publish:
+        if: startsWith(github.ref, 'refs/tags/v')
+        permissions:
+            contents: write
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: actions/setup-node@v3
+              with:
+                  node-version-file: ".node-version"
+
+            - uses: pnpm/action-setup@v2
+              with:
+                  run_install: |
+                      - recursive: true
+                        args: [--frozen-lockfile, --strict-peer-dependencies]
+                      - args: [--global, "@vscode/vsce"]
+
+            - name: Package
+              run: vsce package
+
+            - name: Publish to Github Releases
+              uses: softprops/action-gh-release@c9b46fe7aad9f02afd89b12450b780f52dacfb2d
+              with:
+                  files: |
+                      *.vsix
+
+            - name: Publish to VS Code Marketplace
+              run: vsce publish --target web
+              env:
+                  VSCE_PAT: ${{ secrets.VSCE_PAT }}
