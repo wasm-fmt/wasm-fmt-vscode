@@ -1,6 +1,6 @@
 {
 	"name": "wasm-fmt",
-	"displayName": "wasm-fmt",
+	"displayName": "wasm fmt",
 	"description": "Code Formatter powered by WebAssembly",
 	"author": "magic-akari",
 	"publisher": "wasm-fmt",
