@@ -19,7 +19,7 @@ jobs:
                   run_install: |
                       - recursive: true
                         args: [--frozen-lockfile, --strict-peer-dependencies]
-                      - args: [--global, @vscode/vsce]
+                      - args: [--global, "@vscode/vsce"]
 
             - name: Package
               run: vsce package
