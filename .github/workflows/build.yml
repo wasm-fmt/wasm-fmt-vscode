@@ -1,0 +1,33 @@
+name: Build
+
+on:
+    - push
+    - pull_request
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: actions/setup-node@v3
+              with:
+                  node-version-file: ".node-version"
+
+            - uses: pnpm/action-setup@v2
+              with:
+                  run_install: |
+                      - recursive: true
+                        args: [--frozen-lockfile, --strict-peer-dependencies]
+                      - args: [--global, @vscode/vsce]
+
+            - name: Package
+              run: vsce package
+
+            - name: Upload
+              uses: actions/upload-artifact@v3
+              with:
+                  name: vsiz
+                  path: |
+                      out/
+                      *.vsix
