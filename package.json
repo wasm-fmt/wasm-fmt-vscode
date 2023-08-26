@@ -13,6 +13,7 @@
 	"engines": {
 		"vscode": "^1.81.0"
 	},
+	"packageManager": "pnpm@8.6.12",
 	"categories": [
 		"Formatters"
 	],
