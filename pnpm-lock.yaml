@@ -1,9 +1,13 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@wasm-fmt/clang-format':
-    specifier: ^0.1.1
-    version: 0.1.1
+    specifier: ^0.2.0
+    version: 0.2.0
   '@wasm-fmt/gofmt':
     specifier: ^0.4.1
     version: 0.4.1
@@ -272,8 +276,8 @@ packages:
       - supports-color
     dev: true
 
-  /@wasm-fmt/clang-format@0.1.1:
-    resolution: {integrity: sha512-vMg4Fs6/dV6CkhoSamY5Yi2dK2ujRSa5fUkNDroRt/1NQ3JYMrxkzjDYTRdtg0NnbKeDDMFjVJP7ojM6bjPx0Q==}
+  /@wasm-fmt/clang-format@0.2.0:
+    resolution: {integrity: sha512-F0ZQJtBbmkz7bBQWQ9oBUaCLRHQeJ+55KrRx+5Vz7KnMNTdfY9TM79b98tGsAGZiOvtI+YlGycgt0JW8ZZBsQQ==}
     engines: {node: '>=16.17.0'}
     dev: false
 

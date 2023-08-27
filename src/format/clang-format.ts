@@ -32,7 +32,7 @@ export function formattingSubscription() {
 
 			const UseTab = options.insertSpaces ? "Never" : "ForIndentation";
 
-			const style = JSON.stringify({ BasedOnStyle: "Chromium", IndentWidth, TabWidth, UseTab });
+			const style = JSON.stringify({ ...defaultConfig(document.languageId), IndentWidth, TabWidth, UseTab });
 
 			const formatted = clang_format(text, assumeFilename, style);
 
@@ -57,3 +57,28 @@ const languageMap: Record<string, string> = {
 	"typescript": "main.ts",
 	"proto": "main.proto",
 };
+
+function defaultConfig(languageId: string) {
+	const config: Record<string, any> = { BasedOnStyle: "Chromium" };
+
+	switch (languageId) {
+		case "c":
+		case "cpp":
+		case "csharp": {
+			config.BasedOnStyle = "Microsoft";
+			break;
+		}
+		case "java": {
+			config.BasedOnStyle = "Google";
+			break;
+		}
+		case "javascript":
+		case "typescript": {
+			config.JavaScriptQuotes = "Double";
+			config.AllowShortBlocksOnASingleLine = "Empty";
+			break;
+		}
+	}
+
+	return config;
+}
