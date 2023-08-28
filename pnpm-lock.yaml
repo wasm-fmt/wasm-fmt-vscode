@@ -11,14 +11,17 @@ dependencies:
   '@wasm-fmt/gofmt':
     specifier: ^0.4.1
     version: 0.4.1
+  '@wasm-fmt/rome_fmt':
+    specifier: ^0.0.2
+    version: 0.0.2
   '@wasm-fmt/ruff_fmt':
-    specifier: ^0.2.1
-    version: 0.2.1
+    specifier: ^0.3.0
+    version: 0.3.0
 
 devDependencies:
   '@types/node':
-    specifier: ^20.5.6
-    version: 20.5.6
+    specifier: ^20.5.7
+    version: 20.5.7
   '@types/vscode':
     specifier: ^1.81.0
     version: 1.81.0
@@ -246,8 +249,8 @@ packages:
       path-to-regexp: 6.2.1
     dev: true
 
-  /@types/node@20.5.6:
-    resolution: {integrity: sha512-Gi5wRGPbbyOTX+4Y2iULQ27oUPrefaB0PxGQJnfyWN3kvEDGM3mIB5M/gQLmitZf7A9FmLeaqxD3L1CXpm3VKQ==}
+  /@types/node@20.5.7:
+    resolution: {integrity: sha512-dP7f3LdZIysZnmvP3ANJYTSwg+wLLl8p7RqniVlV7j+oXSXAbt9h0WIBFmJy5inWZoX9wZN6eXx+YXd9Rh3RBA==}
     dev: true
 
   /@types/vscode@1.81.0:
@@ -286,8 +289,12 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: false
 
-  /@wasm-fmt/ruff_fmt@0.2.1:
-    resolution: {integrity: sha512-KidhRam5odRpFRfxjMQvrgUZcq9GDUiAgW+M9g1g2MbzOVvUIisGi1KCyyQE4KZpK22mMRyJPUvw3yo6TpFaPQ==}
+  /@wasm-fmt/rome_fmt@0.0.2:
+    resolution: {integrity: sha512-p/oxf3mN38IkRevowpsLl1PoAeCxjnDqzfxQLCokuydvOjowXjp6O8JHiEh2WaKGACXNQzsQj9fsEdO6+fOk+g==}
+    dev: false
+
+  /@wasm-fmt/ruff_fmt@0.3.0:
+    resolution: {integrity: sha512-E/+orh3mFCAW3JEvIB4owLaeseVSL/3DUu9+r/u3vVF/BC1B5XtucAP/ZvOiieNgKOHEO+DbKkkcyLgNY/jUyQ==}
     dev: false
 
   /accepts@1.3.8:

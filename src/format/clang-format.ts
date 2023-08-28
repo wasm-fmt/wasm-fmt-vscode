@@ -15,12 +15,10 @@ export function formattingSubscription() {
 		"cpp",
 		"csharp",
 		"java",
-		"javascript",
 		"json",
 		"jsonc",
 		"objective-c",
 		"objective-cpp",
-		"typescript",
 		"proto",
 	], {
 		provideDocumentFormattingEdits(document, options, token) {

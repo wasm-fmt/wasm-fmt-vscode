@@ -13,7 +13,7 @@
 	"engines": {
 		"vscode": "^1.81.0"
 	},
-	"packageManager": "pnpm@8.6.12",
+	"packageManager": "pnpm@8.7.0",
 	"categories": [
 		"Formatters"
 	],
@@ -24,12 +24,14 @@
 		"onLanguage:go",
 		"onLanguage:java",
 		"onLanguage:javascript",
+		"onLanguage:javascriptreact",
 		"onLanguage:json",
 		"onLanguage:jsonc",
 		"onLanguage:objective-c",
 		"onLanguage:objective-cpp",
 		"onLanguage:python",
 		"onLanguage:typescript",
+		"onLanguage:typescriptreact",
 		"onLanguage:proto"
 	],
 	"browser": "./out/extension.js",
@@ -41,7 +43,7 @@
 		"run:browser": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. ."
 	},
 	"devDependencies": {
-		"@types/node": "^20.5.6",
+		"@types/node": "^20.5.7",
 		"@types/vscode": "^1.81.0",
 		"@vscode/test-web": "^0.0.45",
 		"esbuild": "^0.19.2"
@@ -49,7 +51,8 @@
 	"dependencies": {
 		"@wasm-fmt/clang-format": "^0.2.0",
 		"@wasm-fmt/gofmt": "^0.4.1",
-		"@wasm-fmt/ruff_fmt": "^0.2.1"
+		"@wasm-fmt/rome_fmt": "^0.0.2",
+		"@wasm-fmt/ruff_fmt": "^0.3.0"
 	},
 	"keywords": [
 		"prettier",
