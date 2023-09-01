@@ -52,7 +52,7 @@
 		"@wasm-fmt/clang-format": "^0.2.0",
 		"@wasm-fmt/gofmt": "^0.4.1",
 		"@wasm-fmt/rome_fmt": "^0.0.2",
-		"@wasm-fmt/ruff_fmt": "^0.3.0"
+		"@wasm-fmt/ruff_fmt": "^0.4.0"
 	},
 	"keywords": [
 		"prettier",

@@ -15,8 +15,8 @@ dependencies:
     specifier: ^0.0.2
     version: 0.0.2
   '@wasm-fmt/ruff_fmt':
-    specifier: ^0.3.0
-    version: 0.3.0
+    specifier: ^0.4.0
+    version: 0.4.0
 
 devDependencies:
   '@types/node':
@@ -293,8 +293,8 @@ packages:
     resolution: {integrity: sha512-p/oxf3mN38IkRevowpsLl1PoAeCxjnDqzfxQLCokuydvOjowXjp6O8JHiEh2WaKGACXNQzsQj9fsEdO6+fOk+g==}
     dev: false
 
-  /@wasm-fmt/ruff_fmt@0.3.0:
-    resolution: {integrity: sha512-E/+orh3mFCAW3JEvIB4owLaeseVSL/3DUu9+r/u3vVF/BC1B5XtucAP/ZvOiieNgKOHEO+DbKkkcyLgNY/jUyQ==}
+  /@wasm-fmt/ruff_fmt@0.4.0:
+    resolution: {integrity: sha512-TBmyqfG5M6BR9Pt2E+kj4kdTDfuZ49HbTifngwJy0QCLVNZ8I2WjlUPy8ayeYDWMMReMsZzn5xWZJKryoYP+BA==}
     dev: false
 
   /accepts@1.3.8:
