@@ -10,50 +10,59 @@ export default async function init(context: vscode.ExtensionContext) {
 }
 
 export function formattingSubscription() {
-	return vscode.languages.registerDocumentFormattingEditProvider([
-		"c",
-		"cpp",
-		"csharp",
-		"java",
-		"json",
-		"jsonc",
-		"objective-c",
-		"objective-cpp",
-		"proto",
-	], {
-		provideDocumentFormattingEdits(document, options, token) {
-			const assumeFilename = languageMap[document.languageId];
-			const text = document.getText();
+	return vscode.languages.registerDocumentFormattingEditProvider(
+		[
+			"c",
+			"cpp",
+			"csharp",
+			"java",
+			"json",
+			"jsonc",
+			"objective-c",
+			"objective-cpp",
+			"proto",
+		],
+		{
+			provideDocumentFormattingEdits(document, options, token) {
+				const assumeFilename = languageMap[document.languageId];
+				const text = document.getText();
 
-			const IndentWidth = options.tabSize;
-			const TabWidth = options.tabSize;
+				const IndentWidth = options.tabSize;
+				const TabWidth = options.tabSize;
 
-			const UseTab = options.insertSpaces ? "Never" : "ForIndentation";
+				const UseTab = options.insertSpaces ? "Never" : "ForIndentation";
 
-			const style = JSON.stringify({ ...defaultConfig(document.languageId), IndentWidth, TabWidth, UseTab });
+				const style = JSON.stringify({
+					...defaultConfig(document.languageId),
+					IndentWidth,
+					TabWidth,
+					UseTab,
+				});
 
-			const formatted = clang_format(text, assumeFilename, style);
+				const formatted = clang_format(text, assumeFilename, style);
 
-			const range = document.validateRange(
-				new vscode.Range(document.positionAt(0), document.positionAt(text.length)),
-			);
-			return [vscode.TextEdit.replace(range, formatted)];
+				const range = document.validateRange(
+					new vscode.Range(
+						document.positionAt(0),
+						document.positionAt(text.length),
+					),
+				);
+				return [vscode.TextEdit.replace(range, formatted)];
+			},
 		},
-	});
+	);
 }
 
 const languageMap: Record<string, string> = {
-	"c": "main.c",
-	"cpp": "main.cc",
-	"csharp": "main.cs",
-	"java": "Main.java",
-	"javascript": "main.js",
-	"json": "main.json",
-	"jsonc": "main.json",
+	c: "main.c",
+	cpp: "main.cc",
+	csharp: "main.cs",
+	java: "Main.java",
+	json: "main.json",
+	jsonc: "main.json",
 	"objective-c": "main.m",
 	"objective-cpp": "main.mm",
-	"typescript": "main.ts",
-	"proto": "main.proto",
+	proto: "main.proto",
 };
 
 function defaultConfig(languageId: string) {

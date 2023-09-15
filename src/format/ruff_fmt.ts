@@ -14,12 +14,16 @@ export function formattingSubscription() {
 		provideDocumentFormattingEdits(document, options, token) {
 			const text = document.getText();
 
-			const indent_style = options.insertSpaces ? options.tabSize : "tab";
+			const indent_style = options.insertSpaces ? "space" : "tab";
+			const indent_width = options.tabSize;
 
-			const formatted = ruff_fmt(text, { indent_style });
+			const formatted = ruff_fmt(text, { indent_style, indent_width });
 
 			const range = document.validateRange(
-				new vscode.Range(document.positionAt(0), document.positionAt(text.length)),
+				new vscode.Range(
+					document.positionAt(0),
+					document.positionAt(text.length),
+				),
 			);
 			return [vscode.TextEdit.replace(range, formatted)];
 		},
