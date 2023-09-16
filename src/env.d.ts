@@ -8,12 +8,7 @@ declare module "@wasm-fmt/rome_fmt/rome_fmt_bg.wasm" {
 	export default wasm;
 }
 
-declare module "@wasm-fmt/gofmt/gofmt.wasm" {
-	const wasm: string;
-	export default wasm;
-}
-
-declare module "@wasm-fmt/clang-format/clang-format.wasm" {
+declare module "@wasm-fmt/*.wasm" {
 	const wasm: string;
 	export default wasm;
 }

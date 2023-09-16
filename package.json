@@ -32,7 +32,8 @@
 		"onLanguage:python",
 		"onLanguage:typescript",
 		"onLanguage:typescriptreact",
-		"onLanguage:proto"
+		"onLanguage:proto",
+		"onLanguage:zig"
 	],
 	"browser": "./out/extension.js",
 	"contributes": {},
@@ -43,7 +44,7 @@
 		"run:browser": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. ."
 	},
 	"devDependencies": {
-		"@types/node": "^20.6.1",
+		"@types/node": "^20.6.2",
 		"@types/vscode": "^1.81.0",
 		"@vscode/test-web": "^0.0.45",
 		"esbuild": "^0.19.3"
@@ -52,7 +53,8 @@
 		"@wasm-fmt/clang-format": "^0.2.3",
 		"@wasm-fmt/gofmt": "^0.4.2",
 		"@wasm-fmt/rome_fmt": "^0.0.2",
-		"@wasm-fmt/ruff_fmt": "^0.4.2"
+		"@wasm-fmt/ruff_fmt": "^0.4.2",
+		"@wasm-fmt/zig_fmt": "^0.0.3"
 	},
 	"keywords": [
 		"prettier",
