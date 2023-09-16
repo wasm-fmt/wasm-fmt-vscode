@@ -11,10 +11,13 @@ It brings the formatting capabilities of VS Code to the browser, making it compa
 - C
 - C++
 - JavaScript
+- JSX
 - TypeScript
+- TSX
 - C#
 - JSON
 - JSONC
 - Objective-C
 - Objective-C++
 - Protobuf
+- Zig
