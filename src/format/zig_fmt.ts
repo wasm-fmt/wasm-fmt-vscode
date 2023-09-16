@@ -15,7 +15,7 @@ export default async function init(context: vscode.ExtensionContext) {
 export function formattingSubscription() {
 	return vscode.languages.registerDocumentFormattingEditProvider(
 		// TODO: ZON
-		["zig", { pattern: "*.zig" }],
+		["zig"],
 		{
 			provideDocumentFormattingEdits(document, options, token) {
 				const text = document.getText();

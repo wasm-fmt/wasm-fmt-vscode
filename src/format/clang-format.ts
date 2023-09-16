@@ -24,7 +24,6 @@ export function formattingSubscription() {
 			"objective-c",
 			"objective-cpp",
 			"proto",
-			{ pattern: "*.proto" },
 		],
 		{
 			provideDocumentFormattingEdits(document, options, token) {

@@ -36,7 +36,22 @@
 		"onLanguage:zig"
 	],
 	"browser": "./out/extension.js",
-	"contributes": {},
+	"contributes": {
+		"languages": [
+			{
+				"id": "proto",
+				"extensions": [
+					".proto"
+				]
+			},
+			{
+				"id": "zig",
+				"extensions": [
+					".zig"
+				]
+			}
+		]
+	},
 	"scripts": {
 		"vscode:prepublish": "./esbuild.mjs --minify",
 		"compile": "./esbuild.mjs",
