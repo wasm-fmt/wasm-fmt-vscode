@@ -1,6 +1,9 @@
 import clang_init, { format as clang_format } from "@wasm-fmt/clang-format";
 import clang_wasm from "@wasm-fmt/clang-format/clang-format.wasm";
 import * as vscode from "vscode";
+import { Logger } from "../logger";
+
+const logger = new Logger("clang-format");
 
 export default async function init(context: vscode.ExtensionContext) {
 	const wasm_uri = vscode.Uri.joinPath(context.extensionUri, clang_wasm);
@@ -39,15 +42,22 @@ export function formattingSubscription() {
 					UseTab,
 				});
 
-				const formatted = clang_format(text, assumeFilename, style);
+				logger.info("style:", style);
 
-				const range = document.validateRange(
-					new vscode.Range(
-						document.positionAt(0),
-						document.positionAt(text.length),
-					),
-				);
-				return [vscode.TextEdit.replace(range, formatted)];
+				try {
+					const formatted = clang_format(text, assumeFilename, style);
+
+					const range = document.validateRange(
+						new vscode.Range(
+							document.positionAt(0),
+							document.positionAt(text.length),
+						),
+					);
+					return [vscode.TextEdit.replace(range, formatted)];
+				} catch (e) {
+					logger.error(e);
+					return [];
+				}
 			},
 		},
 	);
