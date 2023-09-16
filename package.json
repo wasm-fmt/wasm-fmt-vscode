@@ -55,13 +55,11 @@
 	"scripts": {
 		"vscode:prepublish": "./esbuild.mjs --minify",
 		"compile": "./esbuild.mjs",
-		"watch": "./esbuild.mjs --watch",
-		"run:browser": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. ."
+		"watch": "./esbuild.mjs --watch"
 	},
 	"devDependencies": {
 		"@types/node": "^20.6.2",
 		"@types/vscode": "^1.81.0",
-		"@vscode/test-web": "^0.0.45",
 		"esbuild": "^0.19.3"
 	},
 	"dependencies": {
