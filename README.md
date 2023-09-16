@@ -8,16 +8,9 @@ It brings the formatting capabilities of VS Code to the browser, making it compa
 - Python
 - Golang
 - Java
-- C
-- C++
-- JavaScript
-- JSX
-- TypeScript
-- TSX
-- C#
-- JSON
-- JSONC
-- Objective-C
-- Objective-C++
+- C / C++ / C#
+- JavaScript / TypeScript / JSX / TSX
+- JSON / JSONC
+- Objective-C / Objective-C++
 - Protobuf
 - Zig
