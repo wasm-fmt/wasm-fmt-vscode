@@ -63,9 +63,9 @@
 		"esbuild": "^0.19.3"
 	},
 	"dependencies": {
+		"@wasm-fmt/biome_fmt": "^0.1.0",
 		"@wasm-fmt/clang-format": "^0.2.3",
 		"@wasm-fmt/gofmt": "^0.4.2",
-		"@wasm-fmt/rome_fmt": "^0.0.2",
 		"@wasm-fmt/ruff_fmt": "^0.4.2",
 		"@wasm-fmt/zig_fmt": "^0.0.3"
 	},

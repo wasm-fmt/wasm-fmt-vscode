@@ -1,15 +1,15 @@
-import rome_init, { format as rome_fmt } from "@wasm-fmt/rome_fmt";
-import rome_wasm from "@wasm-fmt/rome_fmt/rome_fmt_bg.wasm";
+import biome_init, { format as biome_fmt } from "@wasm-fmt/biome_fmt";
+import biome_wasm from "@wasm-fmt/biome_fmt/biome_fmt_bg.wasm";
 import * as vscode from "vscode";
 import { Logger } from "../logger";
 
 const logger = new Logger("rome-format");
 
 export default async function init(context: vscode.ExtensionContext) {
-	const wasm_uri = vscode.Uri.joinPath(context.extensionUri, rome_wasm);
+	const wasm_uri = vscode.Uri.joinPath(context.extensionUri, biome_wasm);
 
 	const bits = await vscode.workspace.fs.readFile(wasm_uri);
-	await rome_init(bits);
+	await biome_init(bits);
 }
 
 export function formattingSubscription() {
@@ -19,13 +19,16 @@ export function formattingSubscription() {
 			provideDocumentFormattingEdits(document, options, token) {
 				const text = document.getText();
 
-				const indent_style = options.insertSpaces ? options.tabSize : "tab";
+				const indent_style = options.insertSpaces ? "space" : "tab";
+				const indent_width = options.tabSize;
 				logger.info("indent_style:", indent_style);
+				logger.info("indent_width:", indent_width);
 				logger.info("filename", document.fileName);
 
 				try {
-					const formatted = rome_fmt(text, document.fileName, {
+					const formatted = biome_fmt(text, document.fileName, {
 						indent_style,
+						indent_width,
 					});
 
 					const range = document.validateRange(

@@ -5,15 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@wasm-fmt/biome_fmt':
+    specifier: ^0.1.0
+    version: 0.1.0
   '@wasm-fmt/clang-format':
     specifier: ^0.2.3
     version: 0.2.3
   '@wasm-fmt/gofmt':
     specifier: ^0.4.2
     version: 0.4.2
-  '@wasm-fmt/rome_fmt':
-    specifier: ^0.0.2
-    version: 0.0.2
   '@wasm-fmt/ruff_fmt':
     specifier: ^0.4.2
     version: 0.4.2
@@ -240,6 +240,10 @@ packages:
     resolution: {integrity: sha512-VSHV+VnpF8DEm8LNrn8OJ8VuUNcBzN3tMvKrNpbhhfuVjFm82+6v44AbDhLvVFgCzn6vs94EJNTp7w8S6+Q1Rw==}
     dev: true
 
+  /@wasm-fmt/biome_fmt@0.1.0:
+    resolution: {integrity: sha512-QXPnwDG+vg+vE1PZLz3pLIwtn12PNls3FsgJg2ZdZnfJ4A4L6wZZFa2++oqyqoLW64eLRL00MJY8cNdbkuN/TA==}
+    dev: false
+
   /@wasm-fmt/clang-format@0.2.3:
     resolution: {integrity: sha512-VHs2evpeKsVQYbnlHG1Z7NtANcN/HZxFU212a+lgDkPPxU/bfYeAFRREUOowmq0sOGZt+5SjDHP0gMk5TpeTSw==}
     engines: {node: '>=16.17.0'}
@@ -248,10 +252,6 @@ packages:
   /@wasm-fmt/gofmt@0.4.2:
     resolution: {integrity: sha512-6rD421ZOYYPWbZouWpBnWPKIyxklJnHi7aEIiQBE7NTDJKn6O1GwjX7fVoAqHvcpwITnPn6dq8Bi0p1EKbYdhg==}
     engines: {node: '>=16.17.0'}
-    dev: false
-
-  /@wasm-fmt/rome_fmt@0.0.2:
-    resolution: {integrity: sha512-p/oxf3mN38IkRevowpsLl1PoAeCxjnDqzfxQLCokuydvOjowXjp6O8JHiEh2WaKGACXNQzsQj9fsEdO6+fOk+g==}
     dev: false
 
   /@wasm-fmt/ruff_fmt@0.4.2:
