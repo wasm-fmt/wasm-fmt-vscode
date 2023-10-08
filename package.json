@@ -58,14 +58,14 @@
 		"watch": "./esbuild.mjs --watch"
 	},
 	"devDependencies": {
-		"@types/node": "^20.6.2",
-		"@types/vscode": "^1.81.0",
-		"esbuild": "^0.19.3"
+		"@types/node": "^20.8.3",
+		"@types/vscode": "^1.83.0",
+		"esbuild": "^0.19.4"
 	},
 	"dependencies": {
 		"@wasm-fmt/biome_fmt": "^0.1.0",
-		"@wasm-fmt/clang-format": "^0.2.3",
-		"@wasm-fmt/gofmt": "^0.4.2",
+		"@wasm-fmt/clang-format": "^0.2.7",
+		"@wasm-fmt/gofmt": "^0.4.5",
 		"@wasm-fmt/ruff_fmt": "^0.4.2",
 		"@wasm-fmt/zig_fmt": "^0.0.3"
 	},
