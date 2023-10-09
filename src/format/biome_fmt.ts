@@ -6,7 +6,7 @@ import biome_wasm from "@wasm-fmt/biome_fmt/biome_fmt_bg.wasm";
 import * as vscode from "vscode";
 import { Logger } from "../logger";
 
-const logger = new Logger("rome-format");
+const logger = new Logger("biome-format");
 
 export default async function init(context: vscode.ExtensionContext) {
 	const wasm_uri = vscode.Uri.joinPath(context.extensionUri, biome_wasm);
