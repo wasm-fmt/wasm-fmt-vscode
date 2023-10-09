@@ -1,4 +1,7 @@
-import biome_init, { format as biome_fmt } from "@wasm-fmt/biome_fmt";
+import {
+	format as biome_fmt,
+	initSync as biome_init,
+} from "@wasm-fmt/biome_fmt";
 import biome_wasm from "@wasm-fmt/biome_fmt/biome_fmt_bg.wasm";
 import * as vscode from "vscode";
 import { Logger } from "../logger";
@@ -9,7 +12,7 @@ export default async function init(context: vscode.ExtensionContext) {
 	const wasm_uri = vscode.Uri.joinPath(context.extensionUri, biome_wasm);
 
 	const bits = await vscode.workspace.fs.readFile(wasm_uri);
-	await biome_init(bits);
+	biome_init(bits);
 }
 
 export function formattingSubscription() {
