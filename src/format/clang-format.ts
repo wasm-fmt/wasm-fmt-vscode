@@ -33,7 +33,9 @@ export function formattingSubscription() {
 				const IndentWidth = options.tabSize;
 				const TabWidth = options.tabSize;
 
-				const UseTab = options.insertSpaces ? "Never" : "ForIndentation";
+				const UseTab = options.insertSpaces
+					? "Never"
+					: "ForIndentation";
 
 				const style = JSON.stringify({
 					...defaultConfig(document.languageId),
@@ -50,8 +52,8 @@ export function formattingSubscription() {
 					const range = document.validateRange(
 						new vscode.Range(
 							document.positionAt(0),
-							document.positionAt(text.length),
-						),
+							document.positionAt(text.length)
+						)
 					);
 					return [vscode.TextEdit.replace(range, formatted)];
 				} catch (e) {
@@ -59,7 +61,7 @@ export function formattingSubscription() {
 					return [];
 				}
 			},
-		},
+		}
 	);
 }
 
@@ -79,8 +81,6 @@ function defaultConfig(languageId: string) {
 	const config: Record<string, any> = { BasedOnStyle: "Chromium" };
 
 	switch (languageId) {
-		case "c":
-		case "cpp":
 		case "csharp": {
 			config.BasedOnStyle = "Microsoft";
 			break;
