@@ -4,6 +4,9 @@ All notable changes to the "wasm-fmt" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.3]
+tune c/cpp default style
+
 ## [0.2.2]
 use biome for js/ts formatter
 
