@@ -11,6 +11,7 @@ It brings the formatting capabilities of VS Code to the browser, making it compa
 - C / C++ / C#
 - JavaScript / TypeScript / JSX / TSX
 - JSON / JSONC
+- CSS / SCSS / SASS / LESS
 - Objective-C / Objective-C++
 - Protobuf
 - Zig

@@ -77,13 +77,8 @@
 	"keywords": [
 		"prettier",
 		"formatter",
-		"c",
-		"cpp",
-		"go",
-		"java",
-		"javascript",
-		"typescript",
-		"json",
-		"csharp"
+		"web",
+		"wasm",
+		"browser"
 	]
 }
