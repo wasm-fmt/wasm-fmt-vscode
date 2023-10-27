@@ -20,6 +20,9 @@ dependencies:
   '@wasm-fmt/zig_fmt':
     specifier: ^0.0.3
     version: 0.0.3
+  malva:
+    specifier: ^0.1.1
+    version: 0.1.1
 
 devDependencies:
   '@types/node':
@@ -293,6 +296,10 @@ packages:
       '@esbuild/win32-ia32': 0.19.5
       '@esbuild/win32-x64': 0.19.5
     dev: true
+
+  /malva@0.1.1:
+    resolution: {integrity: sha512-0vFoMkSDUA48Dt5seHdHy7TfzFbPnJPp37tqNv4MC5ijIyMQyYWrmnZDvIEQXdUqfanhpwrvt4WhMsJ3p9VmUA==}
+    dev: false
 
   /undici-types@5.25.3:
     resolution: {integrity: sha512-Ga1jfYwRn7+cP9v8auvEXN1rX3sWqlayd4HP7OKk4mZWylEmu3KzXDUGrQUN6Ol7qo1gPvB2e5gX6udnyEPgdA==}

@@ -21,18 +21,22 @@
 		"onLanguage:c",
 		"onLanguage:cpp",
 		"onLanguage:csharp",
+		"onLanguage:css",
 		"onLanguage:go",
 		"onLanguage:java",
 		"onLanguage:javascript",
 		"onLanguage:javascriptreact",
 		"onLanguage:json",
 		"onLanguage:jsonc",
+		"onLanguage:less",
 		"onLanguage:objective-c",
 		"onLanguage:objective-cpp",
+		"onLanguage:proto",
 		"onLanguage:python",
+		"onLanguage:sass",
+		"onLanguage:scss",
 		"onLanguage:typescript",
 		"onLanguage:typescriptreact",
-		"onLanguage:proto",
 		"onLanguage:zig"
 	],
 	"browser": "./out/extension.js",
@@ -67,7 +71,8 @@
 		"@wasm-fmt/clang-format": "^0.2.7",
 		"@wasm-fmt/gofmt": "^0.4.5",
 		"@wasm-fmt/ruff_fmt": "^0.4.3",
-		"@wasm-fmt/zig_fmt": "^0.0.3"
+		"@wasm-fmt/zig_fmt": "^0.0.3",
+		"malva": "^0.1.1"
 	},
 	"keywords": [
 		"prettier",

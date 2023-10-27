@@ -4,6 +4,11 @@ All notable changes to the "wasm-fmt" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.0]
+Introduce new formatter: malva
+
+CSS/SCSS/SASS/LESS are supported.
+
 ## [0.2.3]
 tune c/cpp default style
 
