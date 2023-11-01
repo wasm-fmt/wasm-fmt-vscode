@@ -17,6 +17,7 @@
 	"categories": [
 		"Formatters"
 	],
+	"icon": "images/icon.png",
 	"activationEvents": [
 		"onLanguage:c",
 		"onLanguage:cpp",
