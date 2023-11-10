@@ -15,8 +15,8 @@ dependencies:
     specifier: ^0.4.5
     version: 0.4.5
   '@wasm-fmt/ruff_fmt':
-    specifier: ^0.4.3
-    version: 0.4.3
+    specifier: ^0.5.0
+    version: 0.5.0
   '@wasm-fmt/zig_fmt':
     specifier: ^0.0.3
     version: 0.0.3
@@ -259,8 +259,8 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: false
 
-  /@wasm-fmt/ruff_fmt@0.4.3:
-    resolution: {integrity: sha512-z1bgGNk/D0D1SNjq/GQ39MMEI794h1HJtAPV24/YLAGfTqq3VGxRUErTSsHtFVhdhlk79TfU1TCT3aBwo74jsw==}
+  /@wasm-fmt/ruff_fmt@0.5.0:
+    resolution: {integrity: sha512-HysqgSk+eLOT00N803XnKeKue415y/r7WawCxt6puJtuMcyytwySmzHyd85jr8fIUD+4CECRph4/ogmN9gvGjQ==}
     dev: false
 
   /@wasm-fmt/zig_fmt@0.0.3:

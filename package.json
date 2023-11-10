@@ -71,7 +71,7 @@
 		"@wasm-fmt/biome_fmt": "^0.1.0",
 		"@wasm-fmt/clang-format": "^0.2.7",
 		"@wasm-fmt/gofmt": "^0.4.5",
-		"@wasm-fmt/ruff_fmt": "^0.4.3",
+		"@wasm-fmt/ruff_fmt": "^0.5.0",
 		"@wasm-fmt/zig_fmt": "^0.0.3",
 		"malva": "^0.1.1"
 	},
