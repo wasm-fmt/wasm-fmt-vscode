@@ -11,7 +11,7 @@
 		"url": "https://github.com/wasm-fmt/wasm-fmt-vscode.git"
 	},
 	"engines": {
-		"vscode": "^1.81.0"
+		"vscode": "^2023.0.0"
 	},
 	"packageManager": "pnpm@8.9.2",
 	"categories": [
