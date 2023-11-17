@@ -12,25 +12,25 @@ dependencies:
     specifier: ^0.2.7
     version: 0.2.7
   '@wasm-fmt/gofmt':
-    specifier: ^0.4.5
-    version: 0.4.5
+    specifier: ^0.4.6
+    version: 0.4.6
   '@wasm-fmt/ruff_fmt':
-    specifier: ^0.4.3
-    version: 0.4.3
+    specifier: ^0.5.0
+    version: 0.5.0
   '@wasm-fmt/zig_fmt':
     specifier: ^0.0.3
     version: 0.0.3
   malva:
-    specifier: ^0.1.1
-    version: 0.1.1
+    specifier: ^0.1.2
+    version: 0.1.2
 
 devDependencies:
   '@types/node':
-    specifier: ^20.8.7
-    version: 20.8.7
+    specifier: ^20.9.1
+    version: 20.9.1
   '@types/vscode':
-    specifier: '=1.81.0'
-    version: 1.81.0
+    specifier: ^1.84.1
+    version: 1.84.1
   esbuild:
     specifier: ^0.19.5
     version: 0.19.5
@@ -235,14 +235,14 @@ packages:
     dev: true
     optional: true
 
-  /@types/node@20.8.7:
-    resolution: {integrity: sha512-21TKHHh3eUHIi2MloeptJWALuCu5H7HQTdTrWIFReA8ad+aggoX+lRes3ex7/FtpC+sVUpFMQ+QTfYr74mruiQ==}
+  /@types/node@20.9.1:
+    resolution: {integrity: sha512-HhmzZh5LSJNS5O8jQKpJ/3ZcrrlG6L70hpGqMIAoM9YVD0YBRNWYsfwcXq8VnSjlNpCpgLzMXdiPo+dxcvSmiA==}
     dependencies:
-      undici-types: 5.25.3
+      undici-types: 5.26.5
     dev: true
 
-  /@types/vscode@1.81.0:
-    resolution: {integrity: sha512-YIaCwpT+O2E7WOMq0eCgBEABE++SX3Yl/O02GoMIF2DO3qAtvw7m6BXFYsxnc6XyzwZgh6/s/UG78LSSombl2w==}
+  /@types/vscode@1.84.1:
+    resolution: {integrity: sha512-DB10vBRLEPA/us7p3gQilU2Tq5HDu6JWTyCpD9qtb7MKWIvJS5In9HU3YgVGCXf/miwHJiY62aXwjtUSMpT8HA==}
     dev: true
 
   /@wasm-fmt/biome_fmt@0.1.0:
@@ -254,13 +254,13 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: false
 
-  /@wasm-fmt/gofmt@0.4.5:
-    resolution: {integrity: sha512-L5ooMnlJz/2XADUjwIDnyhhyjjRU2C6DS5DQJF1/3nTo0NMFhriy9XP/BHXCYrD1kcWmab3RWYZf2/PIrOhxEQ==}
+  /@wasm-fmt/gofmt@0.4.6:
+    resolution: {integrity: sha512-VKo4E+HLVlfzXVpNsTx0P8OrEjaNfs894ECi3uA+8SpKEYD/xsXw52gVs1S3BK4WUeNWPePqjPr2XeRVu5YuZQ==}
     engines: {node: '>=16.17.0'}
     dev: false
 
-  /@wasm-fmt/ruff_fmt@0.4.3:
-    resolution: {integrity: sha512-z1bgGNk/D0D1SNjq/GQ39MMEI794h1HJtAPV24/YLAGfTqq3VGxRUErTSsHtFVhdhlk79TfU1TCT3aBwo74jsw==}
+  /@wasm-fmt/ruff_fmt@0.5.0:
+    resolution: {integrity: sha512-HysqgSk+eLOT00N803XnKeKue415y/r7WawCxt6puJtuMcyytwySmzHyd85jr8fIUD+4CECRph4/ogmN9gvGjQ==}
     dev: false
 
   /@wasm-fmt/zig_fmt@0.0.3:
@@ -297,10 +297,10 @@ packages:
       '@esbuild/win32-x64': 0.19.5
     dev: true
 
-  /malva@0.1.1:
-    resolution: {integrity: sha512-0vFoMkSDUA48Dt5seHdHy7TfzFbPnJPp37tqNv4MC5ijIyMQyYWrmnZDvIEQXdUqfanhpwrvt4WhMsJ3p9VmUA==}
+  /malva@0.1.2:
+    resolution: {integrity: sha512-KGpwOUbjka8crPlxN/KGFU2/rTkW+5BG+fYdFIEYu0ELlKIwgGxNHVfdTQB8L7NI9Pl4q/N+LCcWdfs6YhnL5g==}
     dev: false
 
-  /undici-types@5.25.3:
-    resolution: {integrity: sha512-Ga1jfYwRn7+cP9v8auvEXN1rX3sWqlayd4HP7OKk4mZWylEmu3KzXDUGrQUN6Ol7qo1gPvB2e5gX6udnyEPgdA==}
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true

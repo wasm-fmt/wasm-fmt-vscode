@@ -63,17 +63,17 @@
 		"watch": "./esbuild.mjs --watch"
 	},
 	"devDependencies": {
-		"@types/node": "^20.8.7",
-		"@types/vscode": "=1.81.0",
+		"@types/node": "^20.9.1",
+		"@types/vscode": "^1.84.1",
 		"esbuild": "^0.19.5"
 	},
 	"dependencies": {
 		"@wasm-fmt/biome_fmt": "^0.1.0",
 		"@wasm-fmt/clang-format": "^0.2.7",
-		"@wasm-fmt/gofmt": "^0.4.5",
-		"@wasm-fmt/ruff_fmt": "^0.4.3",
+		"@wasm-fmt/gofmt": "^0.4.6",
+		"@wasm-fmt/ruff_fmt": "^0.5.0",
 		"@wasm-fmt/zig_fmt": "^0.0.3",
-		"malva": "^0.1.1"
+		"malva": "^0.1.2"
 	},
 	"keywords": [
 		"prettier",

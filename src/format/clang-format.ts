@@ -52,8 +52,8 @@ export function formattingSubscription() {
 					const range = document.validateRange(
 						new vscode.Range(
 							document.positionAt(0),
-							document.positionAt(text.length)
-						)
+							document.positionAt(text.length),
+						),
 					);
 					return [vscode.TextEdit.replace(range, formatted)];
 				} catch (e) {
@@ -61,7 +61,7 @@ export function formattingSubscription() {
 					return [];
 				}
 			},
-		}
+		},
 	);
 }
 
