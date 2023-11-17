@@ -4,6 +4,10 @@ All notable changes to the "wasm-fmt" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.2]
+
+Revert vscode engine requirement.
+
 ## [0.3.1]
 
 Support python in Notebook(ipynb) file.
