@@ -18,8 +18,8 @@ dependencies:
     specifier: ^0.5.0
     version: 0.5.0
   '@wasm-fmt/zig_fmt':
-    specifier: ^0.0.3
-    version: 0.0.3
+    specifier: ^0.0.4
+    version: 0.0.4
   malva:
     specifier: ^0.1.2
     version: 0.1.2
@@ -263,8 +263,8 @@ packages:
     resolution: {integrity: sha512-HysqgSk+eLOT00N803XnKeKue415y/r7WawCxt6puJtuMcyytwySmzHyd85jr8fIUD+4CECRph4/ogmN9gvGjQ==}
     dev: false
 
-  /@wasm-fmt/zig_fmt@0.0.3:
-    resolution: {integrity: sha512-MuL6k/Ajtz4WlyJ1eAp+NczfN6/HrXfzU6+xRwdSB1mmBQD3A0XQ7Pf89GKqLXzeIlBshHX+Ukr8EE7JsWDFVw==}
+  /@wasm-fmt/zig_fmt@0.0.4:
+    resolution: {integrity: sha512-Qhlw0BAqp9129zqA1C4QMX63cTMCeK9aGGe988NL7jJTtM273teM1EyjORpQ50QPOJAlVVaEQQVmNxf/L3gkhQ==}
     dev: false
 
   /esbuild@0.19.5:
