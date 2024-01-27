@@ -65,7 +65,7 @@
 	"devDependencies": {
 		"@types/node": "^20.9.1",
 		"@types/vscode": "^1.84.1",
-		"esbuild": "^0.19.5"
+		"esbuild": "^0.20.0"
 	},
 	"dependencies": {
 		"@wasm-fmt/biome_fmt": "^0.1.0",
