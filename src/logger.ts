@@ -1,4 +1,4 @@
-import * as vscode from "vscode";
+import vscode = require("vscode");
 
 export class Logger {
 	private static readonly output =

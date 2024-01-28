@@ -1,4 +1,4 @@
-import * as vscode from "vscode";
+import vscode = require("vscode");
 import biome_init, { formattingSubscription as biome_sub } from "./biome_fmt";
 import clang_init, {
 	formattingSubscription as clang_sub,

@@ -3,7 +3,7 @@ import {
 	initSync as biome_init,
 } from "@wasm-fmt/biome_fmt";
 import biome_wasm from "@wasm-fmt/biome_fmt/biome_fmt_bg.wasm";
-import * as vscode from "vscode";
+import vscode = require("vscode");
 import { Logger } from "../logger";
 
 const logger = new Logger("biome-format");

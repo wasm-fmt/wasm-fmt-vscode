@@ -1,6 +1,6 @@
 import clang_init, { format as clang_format } from "@wasm-fmt/clang-format";
 import clang_wasm from "@wasm-fmt/clang-format/clang-format.wasm";
-import * as vscode from "vscode";
+import vscode = require("vscode");
 import { Logger } from "../logger";
 
 const logger = new Logger("clang-format");

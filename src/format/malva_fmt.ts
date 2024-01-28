@@ -1,6 +1,6 @@
 import { format as malva_fmt, initSync as malva_init } from "malva";
 import malva_wasm from "malva/standalone_wasm_bg.wasm";
-import * as vscode from "vscode";
+import vscode = require("vscode");
 import { Logger } from "../logger";
 
 const logger = new Logger("malva-format");

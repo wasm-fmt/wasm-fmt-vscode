@@ -1,6 +1,6 @@
 import go_init, { format as gofmt } from "@wasm-fmt/gofmt";
 import go_wasm from "@wasm-fmt/gofmt/gofmt.wasm";
-import * as vscode from "vscode";
+import vscode = require("vscode");
 import { Logger } from "../logger";
 
 const logger = new Logger("gofmt");
