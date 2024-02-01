@@ -11,7 +11,7 @@ const logger = new Logger("plugin");
 async function activate(context: vscode.ExtensionContext) {
 	await init(context);
 
-	logger.info("done")
+	logger.info("inited");
 
 	context.subscriptions.push(formattingSubscription());
 }
@@ -19,7 +19,7 @@ async function activate(context: vscode.ExtensionContext) {
 // This method is called when your extension is deactivated
 function deactivate() {
 	logger.info("deactivated");
- }
+}
 
 export = {
 	activate,

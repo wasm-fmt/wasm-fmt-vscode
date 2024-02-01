@@ -1,6 +1,6 @@
+import vscode = require("vscode");
 import zig_init, { format as zig_fmt } from "@wasm-fmt/zig_fmt";
 import zig_wasm from "@wasm-fmt/zig_fmt/zig_fmt.wasm";
-import vscode = require("vscode");
 import { Logger } from "../logger";
 
 const logger = new Logger("zig-fmt");

@@ -1,6 +1,6 @@
+import vscode = require("vscode");
 import { format as web_fmt, initSync as web_init } from "@wasm-fmt/web_fmt";
 import web_wasm from "@wasm-fmt/web_fmt/web_fmt_bg.wasm";
-import vscode = require("vscode");
 import { Logger } from "../logger";
 
 const logger = new Logger("web_fmt");
@@ -40,7 +40,10 @@ export function formattingSubscription() {
 				const indent_style = options.insertSpaces ? "space" : "tab";
 				const indent_width = options.tabSize;
 
-				logger.log(document.fileName, JSON.stringify({ indent_style, indent_width }));
+				logger.log(
+					document.fileName,
+					JSON.stringify({ indent_style, indent_width }),
+				);
 
 				try {
 					const formatted = web_fmt(text, document.fileName, {

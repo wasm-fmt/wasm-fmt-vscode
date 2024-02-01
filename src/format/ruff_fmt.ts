@@ -1,6 +1,6 @@
+import vscode = require("vscode");
 import { format as ruff_fmt, initSync as ruff_init } from "@wasm-fmt/ruff_fmt";
 import ruff_wasm from "@wasm-fmt/ruff_fmt/ruff_fmt_bg.wasm";
-import vscode = require("vscode");
 import { Logger } from "../logger";
 
 const logger = new Logger("ruff-format");
