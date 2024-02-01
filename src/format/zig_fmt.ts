@@ -15,10 +15,12 @@ export default async function init(context: vscode.ExtensionContext) {
 export function formattingSubscription() {
 	return vscode.languages.registerDocumentFormattingEditProvider(
 		// TODO: ZON
-		["zig"],
+		["zig", { pattern: "**/*.zig", scheme: "file" }],
 		{
 			provideDocumentFormattingEdits(document, options, token) {
 				const text = document.getText();
+
+				logger.log(document.fileName);
 
 				try {
 					const formatted = zig_fmt(text);

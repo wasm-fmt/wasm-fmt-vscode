@@ -5,32 +5,29 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@wasm-fmt/biome_fmt':
-    specifier: ^0.1.0
-    version: 0.1.0
   '@wasm-fmt/clang-format':
-    specifier: ^0.2.7
-    version: 0.2.7
+    specifier: ^0.2.8
+    version: 0.2.8
   '@wasm-fmt/gofmt':
-    specifier: ^0.4.6
-    version: 0.4.6
+    specifier: ^0.4.7
+    version: 0.4.7
   '@wasm-fmt/ruff_fmt':
-    specifier: ^0.5.0
-    version: 0.5.0
+    specifier: ^0.5.2
+    version: 0.5.2
+  '@wasm-fmt/web_fmt':
+    specifier: ^0.1.4
+    version: 0.1.4
   '@wasm-fmt/zig_fmt':
-    specifier: ^0.0.4
-    version: 0.0.4
-  malva:
-    specifier: ^0.1.2
-    version: 0.1.2
+    specifier: ^0.0.5
+    version: 0.0.5
 
 devDependencies:
   '@types/node':
-    specifier: ^20.9.1
-    version: 20.9.1
+    specifier: ^20.11.14
+    version: 20.11.14
   '@types/vscode':
     specifier: ^1.84.1
-    version: 1.84.1
+    version: 1.85.0
   esbuild:
     specifier: ^0.20.0
     version: 0.20.0
@@ -244,36 +241,36 @@ packages:
     dev: true
     optional: true
 
-  /@types/node@20.9.1:
-    resolution: {integrity: sha512-HhmzZh5LSJNS5O8jQKpJ/3ZcrrlG6L70hpGqMIAoM9YVD0YBRNWYsfwcXq8VnSjlNpCpgLzMXdiPo+dxcvSmiA==}
+  /@types/node@20.11.14:
+    resolution: {integrity: sha512-w3yWCcwULefjP9DmDDsgUskrMoOy5Z8MiwKHr1FvqGPtx7CvJzQvxD7eKpxNtklQxLruxSXWddyeRtyud0RcXQ==}
     dependencies:
       undici-types: 5.26.5
     dev: true
 
-  /@types/vscode@1.84.1:
-    resolution: {integrity: sha512-DB10vBRLEPA/us7p3gQilU2Tq5HDu6JWTyCpD9qtb7MKWIvJS5In9HU3YgVGCXf/miwHJiY62aXwjtUSMpT8HA==}
+  /@types/vscode@1.85.0:
+    resolution: {integrity: sha512-CF/RBon/GXwdfmnjZj0WTUMZN5H6YITOfBCP4iEZlOtVQXuzw6t7Le7+cR+7JzdMrnlm7Mfp49Oj2TuSXIWo3g==}
     dev: true
 
-  /@wasm-fmt/biome_fmt@0.1.0:
-    resolution: {integrity: sha512-QXPnwDG+vg+vE1PZLz3pLIwtn12PNls3FsgJg2ZdZnfJ4A4L6wZZFa2++oqyqoLW64eLRL00MJY8cNdbkuN/TA==}
-    dev: false
-
-  /@wasm-fmt/clang-format@0.2.7:
-    resolution: {integrity: sha512-GpndIvx9l0qCBEdaWRXbJaqZ9/A7fXfJ4Dw+wrB/Ie1xxS68huIR/2W1KB784VAM6apS30SBa7FPADOvuo7QMw==}
+  /@wasm-fmt/clang-format@0.2.8:
+    resolution: {integrity: sha512-sOqXDCMFcSvbkgN4c0qj9gMdrT2rXNa4XQHkvh4E4aDCcuQSOJCNsotq8AldXOZNFxeeYD+ztJcTKSd+k+piLA==}
     engines: {node: '>=16.17.0'}
     dev: false
 
-  /@wasm-fmt/gofmt@0.4.6:
-    resolution: {integrity: sha512-VKo4E+HLVlfzXVpNsTx0P8OrEjaNfs894ECi3uA+8SpKEYD/xsXw52gVs1S3BK4WUeNWPePqjPr2XeRVu5YuZQ==}
+  /@wasm-fmt/gofmt@0.4.7:
+    resolution: {integrity: sha512-W76cOSLTO98JazmH6Ql5tuMDOUecdrArsjtoU4EbTaT0/oUndkmaScXMoNph8TSunfBhV7r7VeH41ePgA80vTg==}
     engines: {node: '>=16.17.0'}
     dev: false
 
-  /@wasm-fmt/ruff_fmt@0.5.0:
-    resolution: {integrity: sha512-HysqgSk+eLOT00N803XnKeKue415y/r7WawCxt6puJtuMcyytwySmzHyd85jr8fIUD+4CECRph4/ogmN9gvGjQ==}
+  /@wasm-fmt/ruff_fmt@0.5.2:
+    resolution: {integrity: sha512-Rk/USZFj3azPIUBtzGWujZxHQWmZ4wYvQodQk1vs8sNBq74omQBma3cRBH4OM5Lzl8jcCDBLHRtLv1MyXS/ubQ==}
     dev: false
 
-  /@wasm-fmt/zig_fmt@0.0.4:
-    resolution: {integrity: sha512-Qhlw0BAqp9129zqA1C4QMX63cTMCeK9aGGe988NL7jJTtM273teM1EyjORpQ50QPOJAlVVaEQQVmNxf/L3gkhQ==}
+  /@wasm-fmt/web_fmt@0.1.4:
+    resolution: {integrity: sha512-ET2lItWzIgG6PzUgRE90t8Rk49bS7rYEYh7fTTD/tzmgv6JhHPub6dhhp3WniDNvuNq2fIdUkTn8nfzqceNAZA==}
+    dev: false
+
+  /@wasm-fmt/zig_fmt@0.0.5:
+    resolution: {integrity: sha512-djNL+AuMT9NlTxSxHqKIJlViX2mflqTjfixXf2CQnM3AOFHRrYS/XNtXL+upnBGuMRRqIKaW7PXB1PAcM6aLkA==}
     dev: false
 
   /esbuild@0.20.0:
@@ -306,10 +303,6 @@ packages:
       '@esbuild/win32-ia32': 0.20.0
       '@esbuild/win32-x64': 0.20.0
     dev: true
-
-  /malva@0.1.2:
-    resolution: {integrity: sha512-KGpwOUbjka8crPlxN/KGFU2/rTkW+5BG+fYdFIEYu0ELlKIwgGxNHVfdTQB8L7NI9Pl4q/N+LCcWdfs6YhnL5g==}
-    dev: false
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}

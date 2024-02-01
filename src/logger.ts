@@ -12,6 +12,7 @@ export class Logger {
 
 	public error(...args: any[]) {
 		Logger.output.appendLine(`[error][${this.scope}] ${args.join(" ")}`);
+		Logger.output.show();
 	}
 
 	public warn(...args: any[]) {

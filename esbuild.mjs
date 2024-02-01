@@ -17,7 +17,7 @@ const options = {
 	target: "es2020",
 	loader: { ".wasm": "file" },
 	external: ["vscode"],
-	platform: "node",
+	format: "cjs",
 };
 
 if (process.argv.includes("--watch")) {

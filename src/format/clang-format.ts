@@ -24,6 +24,10 @@ export function formattingSubscription() {
 			"objective-c",
 			"objective-cpp",
 			"proto",
+			{
+				pattern: "**/*.proto",
+				scheme: "file",
+			},
 		],
 		{
 			provideDocumentFormattingEdits(document, options, token) {
@@ -44,7 +48,7 @@ export function formattingSubscription() {
 					UseTab,
 				});
 
-				logger.info("style:", style);
+				logger.log(document.fileName, style);
 
 				try {
 					const formatted = clang_format(text, assumeFilename, style);

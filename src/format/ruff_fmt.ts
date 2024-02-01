@@ -20,9 +20,7 @@ export function formattingSubscription() {
 			const indent_style = options.insertSpaces ? "space" : "tab";
 			const indent_width = options.tabSize;
 
-			logger.info("file:", document.fileName);
-			logger.info("indent_style:", indent_style);
-			logger.info("indent_width:", indent_width);
+			logger.info(document.fileName, JSON.stringify({ indent_style, indent_width }));
 
 			try {
 				const formatted = ruff_fmt(text, document.fileName, {

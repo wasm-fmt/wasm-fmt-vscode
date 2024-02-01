@@ -17,6 +17,8 @@ export function formattingSubscription() {
 		provideDocumentFormattingEdits(document, options, token) {
 			const text = document.getText();
 
+			logger.log(document.fileName);
+
 			try {
 				const formatted = gofmt(text);
 

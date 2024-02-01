@@ -19,61 +19,25 @@
 	],
 	"icon": "images/icon.png",
 	"activationEvents": [
-		"onLanguage:c",
-		"onLanguage:cpp",
-		"onLanguage:csharp",
-		"onLanguage:css",
-		"onLanguage:go",
-		"onLanguage:java",
-		"onLanguage:javascript",
-		"onLanguage:javascriptreact",
-		"onLanguage:json",
-		"onLanguage:jsonc",
-		"onLanguage:less",
-		"onLanguage:objective-c",
-		"onLanguage:objective-cpp",
-		"onLanguage:proto",
-		"onLanguage:python",
-		"onLanguage:sass",
-		"onLanguage:scss",
-		"onLanguage:typescript",
-		"onLanguage:typescriptreact",
-		"onLanguage:zig"
+		"onStartupFinished"
 	],
 	"browser": "./out/extension.js",
-	"contributes": {
-		"languages": [
-			{
-				"id": "proto",
-				"extensions": [
-					".proto"
-				]
-			},
-			{
-				"id": "zig",
-				"extensions": [
-					".zig"
-				]
-			}
-		]
-	},
 	"scripts": {
 		"vscode:prepublish": "./esbuild.mjs --minify",
 		"compile": "./esbuild.mjs",
 		"watch": "./esbuild.mjs --watch"
 	},
 	"devDependencies": {
-		"@types/node": "^20.9.1",
+		"@types/node": "^20.11.14",
 		"@types/vscode": "^1.84.1",
 		"esbuild": "^0.20.0"
 	},
 	"dependencies": {
-		"@wasm-fmt/biome_fmt": "^0.1.0",
-		"@wasm-fmt/clang-format": "^0.2.7",
-		"@wasm-fmt/gofmt": "^0.4.6",
-		"@wasm-fmt/ruff_fmt": "^0.5.0",
-		"@wasm-fmt/zig_fmt": "^0.0.4",
-		"malva": "^0.1.2"
+		"@wasm-fmt/clang-format": "^0.2.8",
+		"@wasm-fmt/gofmt": "^0.4.7",
+		"@wasm-fmt/ruff_fmt": "^0.5.2",
+		"@wasm-fmt/web_fmt": "^0.1.4",
+		"@wasm-fmt/zig_fmt": "^0.0.5"
 	},
 	"keywords": [
 		"prettier",
