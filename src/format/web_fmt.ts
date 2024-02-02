@@ -30,6 +30,7 @@ export function formattingSubscription() {
 				const indent_width = options.tabSize;
 
 				script_logger.log(
+					document.languageId,
 					document.fileName,
 					JSON.stringify({ indent_style, indent_width }),
 				);
@@ -69,6 +70,7 @@ export function formattingSubscription() {
 				const indent_width = options.tabSize;
 
 				style_logger.log(
+					document.languageId,
 					document.fileName,
 					JSON.stringify({ indent_style, indent_width }),
 				);
@@ -118,6 +120,7 @@ export function formattingSubscription() {
 				const indent_width = options.tabSize;
 
 				markup_logger.log(
+					document.languageId,
 					document.fileName,
 					JSON.stringify({ indent_style, indent_width }),
 				);

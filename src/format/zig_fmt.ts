@@ -20,7 +20,7 @@ export function formattingSubscription() {
 			provideDocumentFormattingEdits(document, options, token) {
 				const text = document.getText();
 
-				logger.log(document.fileName);
+				logger.log(document.languageId, document.fileName);
 
 				try {
 					const formatted = zig_fmt(text);

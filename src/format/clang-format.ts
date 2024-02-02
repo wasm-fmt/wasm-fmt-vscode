@@ -48,7 +48,7 @@ export function formattingSubscription() {
 					UseTab,
 				});
 
-				logger.log(document.fileName, style);
+				logger.log(document.languageId, document.fileName, style);
 
 				try {
 					const formatted = clang_format(text, assumeFilename, style);
