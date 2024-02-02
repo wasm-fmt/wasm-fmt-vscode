@@ -15,8 +15,8 @@ dependencies:
     specifier: ^0.5.2
     version: 0.5.2
   '@wasm-fmt/web_fmt':
-    specifier: ^0.1.4
-    version: 0.1.4
+    specifier: ^0.1.5
+    version: 0.1.5
   '@wasm-fmt/zig_fmt':
     specifier: ^0.0.5
     version: 0.0.5
@@ -265,8 +265,8 @@ packages:
     resolution: {integrity: sha512-Rk/USZFj3azPIUBtzGWujZxHQWmZ4wYvQodQk1vs8sNBq74omQBma3cRBH4OM5Lzl8jcCDBLHRtLv1MyXS/ubQ==}
     dev: false
 
-  /@wasm-fmt/web_fmt@0.1.4:
-    resolution: {integrity: sha512-ET2lItWzIgG6PzUgRE90t8Rk49bS7rYEYh7fTTD/tzmgv6JhHPub6dhhp3WniDNvuNq2fIdUkTn8nfzqceNAZA==}
+  /@wasm-fmt/web_fmt@0.1.5:
+    resolution: {integrity: sha512-aPihnbUpU4FupWrEtBJxBybCGK4e41h9IjidPv/xieFAAatVylaBhc8B5TaH/88gh6lI1GYzagV7hxwT7qR3Yg==}
     dev: false
 
   /@wasm-fmt/zig_fmt@0.0.5:

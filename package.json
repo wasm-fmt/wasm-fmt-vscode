@@ -36,7 +36,7 @@
 		"@wasm-fmt/clang-format": "^0.2.8",
 		"@wasm-fmt/gofmt": "^0.4.7",
 		"@wasm-fmt/ruff_fmt": "^0.5.2",
-		"@wasm-fmt/web_fmt": "^0.1.4",
+		"@wasm-fmt/web_fmt": "^0.1.5",
 		"@wasm-fmt/zig_fmt": "^0.0.5"
 	},
 	"keywords": [
