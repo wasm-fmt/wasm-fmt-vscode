@@ -13,7 +13,7 @@ dependencies:
     version: 0.4.7
   '@wasm-fmt/ruff_fmt':
     specifier: ^0.5.2
-    version: 0.5.2
+    version: 0.5.3
   '@wasm-fmt/web_fmt':
     specifier: ^0.1.5
     version: 0.1.5
@@ -261,8 +261,8 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: false
 
-  /@wasm-fmt/ruff_fmt@0.5.2:
-    resolution: {integrity: sha512-Rk/USZFj3azPIUBtzGWujZxHQWmZ4wYvQodQk1vs8sNBq74omQBma3cRBH4OM5Lzl8jcCDBLHRtLv1MyXS/ubQ==}
+  /@wasm-fmt/ruff_fmt@0.5.3:
+    resolution: {integrity: sha512-A6RaqgGlq0dAIJF3Cgje7GPvY+rQJGehTij4VUzI6lD02R3L/cT8SCf2eatgTjt9IyHKbMkBQqfyGWFzIrtWKQ==}
     dev: false
 
   /@wasm-fmt/web_fmt@0.1.5:
