@@ -49,4 +49,8 @@ wasm fmt is a multi-language code formatting tool with the following advantages:
 
   - [x] Lua
 
+- [sql_fmt](https://github.com/wasm-fmt/sql_fmt)
+
+  - [x] SQL
+
 [^1]: JavaScript / TypeScrip / JSON / JSONC are supported by clang-format as well, but web_fmt is used for better output.

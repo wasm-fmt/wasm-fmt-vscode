@@ -4,6 +4,11 @@ All notable changes to the "wasm-fmt" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.5]
+
+Support Lua.
+Support SQL.
+
 ## [0.3.4]
 
 Fix regression: `web_fmt` not working with untitled files.
