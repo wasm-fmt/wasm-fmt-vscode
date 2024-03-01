@@ -5,27 +5,30 @@ import clang_init, {
 import go_init, { formattingSubscription as go_sub } from "./gofmt";
 import lua_init, { formattingSubscription as lua_sub } from "./lua_fmt";
 import ruff_init, { formattingSubscription as ruff_sub } from "./ruff_fmt";
+import sql_init, { formattingSubscription as sql_sub } from "./sql_fmt";
 import web_init, { formattingSubscription as web_sub } from "./web_fmt";
 import zig_init, { formattingSubscription as zig_sub } from "./zig_fmt";
 
 export default function init(context: vscode.ExtensionContext) {
 	return Promise.all([
-		web_init(context),
 		clang_init(context),
 		go_init(context),
 		lua_init(context),
 		ruff_init(context),
+		sql_init(context),
+		web_init(context),
 		zig_init(context),
 	]);
 }
 
 export function formattingSubscription() {
 	return vscode.Disposable.from(
-		web_sub(),
 		clang_sub(),
 		go_sub(),
 		lua_sub(),
 		ruff_sub(),
+		sql_sub(),
+		web_sub(),
 		zig_sub(),
 	);
 }
