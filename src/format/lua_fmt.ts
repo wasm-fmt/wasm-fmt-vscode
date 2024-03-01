@@ -27,7 +27,7 @@ export function formattingSubscription() {
 			);
 
 			try {
-				const formatted = lua_fmt(text, {
+				const formatted = lua_fmt(text, document.fileName, {
 					indent_style,
 					indent_width,
 				});
