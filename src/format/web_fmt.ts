@@ -1,5 +1,6 @@
 import vscode = require("vscode");
 import {
+	format_json,
 	format as format_markup,
 	format_script,
 	format_style,
@@ -11,6 +12,7 @@ import { Logger } from "../logger";
 const script_logger = new Logger("web_fmt:script");
 const style_logger = new Logger("web_fmt:style");
 const markup_logger = new Logger("web_fmt:markup");
+const json_logger = new Logger("web_fmt:json");
 
 export default async function init(context: vscode.ExtensionContext) {
 	const wasm_uri = vscode.Uri.joinPath(context.extensionUri, web_wasm);
@@ -102,12 +104,14 @@ export function formattingSubscription() {
 	);
 	const markup_sub = vscode.languages.registerDocumentFormattingEditProvider(
 		[
+			"astro",
 			"html",
 			"jinja",
 			"svelte",
 			"twig",
 			"vue",
 			"vue-html",
+			{ pattern: "**/*.astro", scheme: "file" },
 			{ pattern: "**/*.j2", scheme: "file" },
 			{ pattern: "**/*.svelte", scheme: "file" },
 			{ pattern: "**/*.twig", scheme: "file" },
@@ -150,8 +154,43 @@ export function formattingSubscription() {
 			},
 		},
 	);
+	const json_sub = vscode.languages.registerDocumentFormattingEditProvider(
+		["json", "jsonc"],
+		{
+			provideDocumentFormattingEdits(document, options, token) {
+				const text = document.getText();
 
-	return vscode.Disposable.from(script_sub, style_sub, markup_sub);
+				const indent_style = options.insertSpaces ? "space" : "tab";
+				const indent_width = options.tabSize;
+
+				json_logger.log(
+					document.languageId,
+					document.fileName,
+					JSON.stringify({ indent_style, indent_width }),
+				);
+
+				try {
+					const formatted = format_json(text, {
+						indent_style,
+						indent_width,
+					});
+
+					const range = document.validateRange(
+						new vscode.Range(
+							document.positionAt(0),
+							document.positionAt(text.length),
+						),
+					);
+					return [vscode.TextEdit.replace(range, formatted)];
+				} catch (error) {
+					json_logger.error(error);
+					return [];
+				}
+			},
+		},
+	);
+
+	return vscode.Disposable.from(script_sub, style_sub, markup_sub, json_sub);
 }
 
 function normalize_script_extension(
