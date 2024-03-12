@@ -12,8 +12,8 @@ dependencies:
     specifier: ^0.4.7
     version: 0.4.7
   '@wasm-fmt/lua_fmt':
-    specifier: ^0.0.3
-    version: 0.0.3
+    specifier: ^0.0.4
+    version: 0.0.4
   '@wasm-fmt/ruff_fmt':
     specifier: ^0.5.4
     version: 0.5.4
@@ -267,8 +267,8 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: false
 
-  /@wasm-fmt/lua_fmt@0.0.3:
-    resolution: {integrity: sha512-PCoC0t27swWQhC3rBKFSUqFbglTwScNVcY1KGCB2DZYuyB4iS3Yoc2Qskxr/XhYdvMuhzEVqAGjpeB55RIDDeg==}
+  /@wasm-fmt/lua_fmt@0.0.4:
+    resolution: {integrity: sha512-qQIEDWI7rfKALxsi2nUybhRex0dDeJRNi0MoOHOYgkRunGSFqD0KS2dMP0983zyOEWpGrBbneTKXd1D/BV+v6Q==}
     dev: false
 
   /@wasm-fmt/ruff_fmt@0.5.4:
