@@ -10,7 +10,7 @@ dependencies:
     version: 0.2.8
   '@wasm-fmt/gofmt':
     specifier: ^0.4.7
-    version: 0.4.7
+    version: 0.4.9
   '@wasm-fmt/lua_fmt':
     specifier: ^0.0.3
     version: 0.0.3
@@ -262,8 +262,8 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: false
 
-  /@wasm-fmt/gofmt@0.4.7:
-    resolution: {integrity: sha512-W76cOSLTO98JazmH6Ql5tuMDOUecdrArsjtoU4EbTaT0/oUndkmaScXMoNph8TSunfBhV7r7VeH41ePgA80vTg==}
+  /@wasm-fmt/gofmt@0.4.9:
+    resolution: {integrity: sha512-YiJKASbwWHD9Rt4MD1Xwb5DanB0MQLYXgxeNGocxE5nu7ZyzPgm1nTn0sFVCJoxYMsGn5ypyXakuHTQtiJu4Ag==}
     engines: {node: '>=16.17.0'}
     dev: false
 
