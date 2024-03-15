@@ -18,8 +18,8 @@ dependencies:
     specifier: ^0.5.4
     version: 0.5.4
   '@wasm-fmt/sql_fmt':
-    specifier: ^0.0.1
-    version: 0.0.1
+    specifier: ^0.0.2
+    version: 0.0.2
   '@wasm-fmt/web_fmt':
     specifier: ^0.1.6
     version: 0.1.6
@@ -275,8 +275,8 @@ packages:
     resolution: {integrity: sha512-xsswE4cqe+PHokZMHIdU3MFiBZRG9iXx/uY27gCqmzF6R9TV4okEGSppLEPXwciHqsEvkVzMCe2jNhjTkeQxDw==}
     dev: false
 
-  /@wasm-fmt/sql_fmt@0.0.1:
-    resolution: {integrity: sha512-P7dvId62/hl8dsczvZ8yYJbin0UUr5wb8FzRrTk2CIDj/9+tvKj/ozsbLVU5oLiSW/YG8hm7Gbjpi50Kxfcy6w==}
+  /@wasm-fmt/sql_fmt@0.0.2:
+    resolution: {integrity: sha512-pr6HacbCwE87e/Rvc8zwtzaSE2EfEf7JCNf9GEHobITMbR1f0PcAWjmfdBaNo22If0Kz1pp3m3h02X7Vx6OXoQ==}
     dev: false
 
   /@wasm-fmt/web_fmt@0.1.6:
