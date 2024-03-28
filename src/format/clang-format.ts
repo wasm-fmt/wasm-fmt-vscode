@@ -29,7 +29,6 @@ export function formattingSubscription() {
 		],
 		{
 			provideDocumentFormattingEdits(document, options, token) {
-				const assumeFilename = languageMap[document.languageId];
 				const text = document.getText();
 
 				const IndentWidth = options.tabSize;
@@ -49,7 +48,11 @@ export function formattingSubscription() {
 				logger.log(document.languageId, document.fileName, style);
 
 				try {
-					const formatted = clang_format(text, assumeFilename, style);
+					const filename = document.isUntitled
+						? languageMap[document.languageId]
+						: document.fileName;
+
+					const formatted = clang_format(text, filename, style);
 
 					const range = document.validateRange(
 						new vscode.Range(
