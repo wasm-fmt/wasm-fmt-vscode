@@ -28,17 +28,17 @@
 		"watch": "./esbuild.mjs --watch"
 	},
 	"devDependencies": {
-		"@types/node": "^20.11.24",
+		"@types/node": "^20.11.30",
 		"@types/vscode": "^1.84.1",
-		"esbuild": "^0.20.1"
+		"esbuild": "^0.20.2"
 	},
 	"dependencies": {
 		"@wasm-fmt/clang-format": "^0.2.8",
-		"@wasm-fmt/gofmt": "^0.4.7",
-		"@wasm-fmt/lua_fmt": "^0.0.3",
-		"@wasm-fmt/ruff_fmt": "^0.5.4",
-		"@wasm-fmt/sql_fmt": "^0.0.1",
-		"@wasm-fmt/web_fmt": "^0.1.6",
+		"@wasm-fmt/gofmt": "^0.4.9",
+		"@wasm-fmt/lua_fmt": "^0.0.4",
+		"@wasm-fmt/ruff_fmt": "^0.5.8",
+		"@wasm-fmt/sql_fmt": "^0.0.2",
+		"@wasm-fmt/web_fmt": "^0.1.9",
 		"@wasm-fmt/zig_fmt": "^0.0.5"
 	},
 	"keywords": [
