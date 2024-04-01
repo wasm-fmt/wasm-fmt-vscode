@@ -13,7 +13,7 @@
 	"engines": {
 		"vscode": "^1.84.1"
 	},
-	"packageManager": "pnpm@8.15.1",
+	"packageManager": "pnpm@8.15.5",
 	"categories": [
 		"Formatters"
 	],
@@ -28,7 +28,7 @@
 		"watch": "./esbuild.mjs --watch"
 	},
 	"devDependencies": {
-		"@types/node": "^20.11.30",
+		"@types/node": "^20.12.2",
 		"@types/vscode": "^1.84.1",
 		"esbuild": "^0.20.2"
 	},
