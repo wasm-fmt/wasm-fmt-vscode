@@ -4,6 +4,11 @@ All notable changes to the "wasm-fmt" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.6]
+
+Bump dependencies.
+Pass filename to clang-format.
+
 ## [0.3.5]
 
 Support Lua.
