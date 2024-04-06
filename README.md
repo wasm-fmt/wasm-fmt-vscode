@@ -41,6 +41,10 @@ wasm fmt is a multi-language code formatting tool with the following advantages:
   - [ ] JSON / JSONC [^1]
   - [x] Protobuf
 
+- [dart_fmt](https://github.com/wasm-fmt/dart_fmt)
+
+  - [x] Dart
+
 - [zig_fmt](https://github.com/wasm-fmt/zig_fmt)
 
   - [x] Zig
