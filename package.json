@@ -11,7 +11,7 @@
 		"url": "https://github.com/wasm-fmt/wasm-fmt-vscode.git"
 	},
 	"engines": {
-		"vscode": "^1.84.1"
+		"vscode": "^1.88.0"
 	},
 	"packageManager": "pnpm@8.15.6",
 	"categories": [
@@ -28,8 +28,8 @@
 		"watch": "./esbuild.mjs --watch"
 	},
 	"devDependencies": {
-		"@types/node": "^20.12.2",
-		"@types/vscode": "^1.84.1",
+		"@types/node": "^20.12.5",
+		"@types/vscode": "^1.88.0",
 		"esbuild": "^0.20.2"
 	},
 	"dependencies": {
