@@ -8,6 +8,9 @@ dependencies:
   '@wasm-fmt/clang-format':
     specifier: ^0.2.8
     version: 0.2.8
+  '@wasm-fmt/dart_fmt':
+    specifier: ^0.0.3
+    version: 0.0.3
   '@wasm-fmt/gofmt':
     specifier: ^0.4.9
     version: 0.4.9
@@ -260,6 +263,10 @@ packages:
   /@wasm-fmt/clang-format@0.2.8:
     resolution: {integrity: sha512-sOqXDCMFcSvbkgN4c0qj9gMdrT2rXNa4XQHkvh4E4aDCcuQSOJCNsotq8AldXOZNFxeeYD+ztJcTKSd+k+piLA==}
     engines: {node: '>=16.17.0'}
+    dev: false
+
+  /@wasm-fmt/dart_fmt@0.0.3:
+    resolution: {integrity: sha512-bM0eoCwRYn0jLzgS/gDSOYB2FRKQoj9CJxY6fDvPtwTm5TaiFHBbac9T+2FLg7t1fHSTaTA5dQkL4ZK2FjIuog==}
     dev: false
 
   /@wasm-fmt/gofmt@0.4.9:
