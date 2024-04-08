@@ -34,7 +34,7 @@
 	},
 	"dependencies": {
 		"@wasm-fmt/clang-format": "^0.2.8",
-		"@wasm-fmt/dart_fmt": "^0.0.3",
+		"@wasm-fmt/dart_fmt": "^0.1.0",
 		"@wasm-fmt/gofmt": "^0.4.9",
 		"@wasm-fmt/lua_fmt": "^0.0.4",
 		"@wasm-fmt/ruff_fmt": "^0.5.8",

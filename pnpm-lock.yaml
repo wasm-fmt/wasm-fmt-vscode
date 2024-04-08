@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.2.8
     version: 0.2.8
   '@wasm-fmt/dart_fmt':
-    specifier: ^0.0.3
-    version: 0.0.3
+    specifier: ^0.1.0
+    version: 0.1.0
   '@wasm-fmt/gofmt':
     specifier: ^0.4.9
     version: 0.4.9
@@ -265,8 +265,8 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: false
 
-  /@wasm-fmt/dart_fmt@0.0.3:
-    resolution: {integrity: sha512-bM0eoCwRYn0jLzgS/gDSOYB2FRKQoj9CJxY6fDvPtwTm5TaiFHBbac9T+2FLg7t1fHSTaTA5dQkL4ZK2FjIuog==}
+  /@wasm-fmt/dart_fmt@0.1.0:
+    resolution: {integrity: sha512-IVIgEd9YOQPAxTzPl1TDIbc3gIRYqAnVqrrfIQOTHWMBXka+Xqb+8Iv6iyhbaUWCmtsAfmRN5c+wyxTDm2aDzQ==}
     dev: false
 
   /@wasm-fmt/gofmt@0.4.9:
