@@ -1,4 +1,4 @@
-lockfileVersion: '6.0'
+lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: true
@@ -38,7 +38,7 @@ importers:
         version: 20.12.5
       '@types/vscode':
         specifier: ^1.88.0
-        version: 1.88.0
+        version: 1.89.0
       esbuild:
         specifier: ^0.20.2
         version: 0.20.2
@@ -186,8 +186,8 @@ packages:
   '@types/node@20.12.5':
     resolution: {integrity: sha512-BD+BjQ9LS/D8ST9p5uqBxghlN+S42iuNxjsUGjeZobe/ciXzk2qb1B6IXc6AnRLS+yFJRpN2IPEHMzwspfDJNw==}
 
-  '@types/vscode@1.88.0':
-    resolution: {integrity: sha512-rWY+Bs6j/f1lvr8jqZTyp5arRMfovdxolcqGi+//+cPDOh8SBvzXH90e7BiSXct5HJ9HGW6jATchbRTpTJpEkw==}
+  '@types/vscode@1.89.0':
+    resolution: {integrity: sha512-TMfGKLSVxfGfoO8JfIE/neZqv7QLwS4nwPwL/NwMvxtAY2230H2I4Z5xx6836pmJvMAzqooRQ4pmLm7RUicP3A==}
 
   '@wasm-fmt/clang-format@0.2.8':
     resolution: {integrity: sha512-sOqXDCMFcSvbkgN4c0qj9gMdrT2rXNa4XQHkvh4E4aDCcuQSOJCNsotq8AldXOZNFxeeYD+ztJcTKSd+k+piLA==}
@@ -298,7 +298,7 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/vscode@1.88.0': {}
+  '@types/vscode@1.89.0': {}
 
   '@wasm-fmt/clang-format@0.2.8': {}
 
