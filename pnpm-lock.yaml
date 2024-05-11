@@ -1,4 +1,4 @@
-lockfileVersion: '6.0'
+lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: true
@@ -22,7 +22,7 @@ importers:
         version: 0.0.4
       '@wasm-fmt/ruff_fmt':
         specifier: ^0.5.8
-        version: 0.5.8
+        version: 0.5.9
       '@wasm-fmt/sql_fmt':
         specifier: ^0.0.2
         version: 0.0.2
@@ -203,8 +203,8 @@ packages:
   '@wasm-fmt/lua_fmt@0.0.4':
     resolution: {integrity: sha512-qQIEDWI7rfKALxsi2nUybhRex0dDeJRNi0MoOHOYgkRunGSFqD0KS2dMP0983zyOEWpGrBbneTKXd1D/BV+v6Q==}
 
-  '@wasm-fmt/ruff_fmt@0.5.8':
-    resolution: {integrity: sha512-tcxdQvhVdw2wqlAei4+FWs5HYLYiUM1DlCgW+2VEPXw2y1OR5DEd/fDdNolMkJuBXj1DvnxIyCHT+U7L+Nr0pQ==}
+  '@wasm-fmt/ruff_fmt@0.5.9':
+    resolution: {integrity: sha512-WOPv8EtrDu+i/IJYc/ZW+qgERVsUsVpKK4mCc6glPxRjENSPP2a0bYrRpET+F4j9XQ4ZO0n9qNGBKXD0a6zteg==}
 
   '@wasm-fmt/sql_fmt@0.0.2':
     resolution: {integrity: sha512-pr6HacbCwE87e/Rvc8zwtzaSE2EfEf7JCNf9GEHobITMbR1f0PcAWjmfdBaNo22If0Kz1pp3m3h02X7Vx6OXoQ==}
@@ -308,7 +308,7 @@ snapshots:
 
   '@wasm-fmt/lua_fmt@0.0.4': {}
 
-  '@wasm-fmt/ruff_fmt@0.5.8': {}
+  '@wasm-fmt/ruff_fmt@0.5.9': {}
 
   '@wasm-fmt/sql_fmt@0.0.2': {}
 
