@@ -9,10 +9,10 @@ importers:
   .:
     dependencies:
       '@wasm-fmt/clang-format':
-        specifier: ^0.2.8
+        specifier: ^0.2.10
         version: 0.2.10
       '@wasm-fmt/dart_fmt':
-        specifier: ^0.1.0
+        specifier: ^0.1.1
         version: 0.1.1
       '@wasm-fmt/gofmt':
         specifier: ^0.4.9
@@ -21,24 +21,24 @@ importers:
         specifier: ^0.0.5
         version: 0.0.5
       '@wasm-fmt/ruff_fmt':
-        specifier: ^0.5.8
+        specifier: ^0.5.10
         version: 0.5.10
       '@wasm-fmt/sql_fmt':
         specifier: ^0.0.2
         version: 0.0.2
       '@wasm-fmt/web_fmt':
-        specifier: ^0.1.9
+        specifier: ^0.1.10
         version: 0.1.10
       '@wasm-fmt/zig_fmt':
         specifier: ^0.0.5
         version: 0.0.5
     devDependencies:
       '@types/node':
-        specifier: ^20.12.5
-        version: 20.12.5
+        specifier: ^20.14.2
+        version: 20.14.2
       '@types/vscode':
         specifier: ^1.88.0
-        version: 1.88.0
+        version: 1.90.0
       esbuild:
         specifier: ^0.20.2
         version: 0.20.2
@@ -183,11 +183,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@types/node@20.12.5':
-    resolution: {integrity: sha512-BD+BjQ9LS/D8ST9p5uqBxghlN+S42iuNxjsUGjeZobe/ciXzk2qb1B6IXc6AnRLS+yFJRpN2IPEHMzwspfDJNw==}
+  '@types/node@20.14.2':
+    resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
 
-  '@types/vscode@1.88.0':
-    resolution: {integrity: sha512-rWY+Bs6j/f1lvr8jqZTyp5arRMfovdxolcqGi+//+cPDOh8SBvzXH90e7BiSXct5HJ9HGW6jATchbRTpTJpEkw==}
+  '@types/vscode@1.90.0':
+    resolution: {integrity: sha512-oT+ZJL7qHS9Z8bs0+WKf/kQ27qWYR3trsXpq46YDjFqBsMLG4ygGGjPaJ2tyrH0wJzjOEmDyg9PDJBBhWg9pkQ==}
 
   '@wasm-fmt/clang-format@0.2.10':
     resolution: {integrity: sha512-MyIUd2wGJ6/Ufno7yxiUkzEOkmQA//7MzMUczs2cDlBW9dWXthMbYfClaP9VeS1CV0GOSECBS6mWkHZIplSg5w==}
@@ -294,11 +294,11 @@ snapshots:
   '@esbuild/win32-x64@0.20.2':
     optional: true
 
-  '@types/node@20.12.5':
+  '@types/node@20.14.2':
     dependencies:
       undici-types: 5.26.5
 
-  '@types/vscode@1.88.0': {}
+  '@types/vscode@1.90.0': {}
 
   '@wasm-fmt/clang-format@0.2.10': {}
 
