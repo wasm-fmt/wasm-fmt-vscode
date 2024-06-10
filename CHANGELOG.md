@@ -4,6 +4,10 @@ All notable changes to the "wasm-fmt" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.4.1]
+
+Bump dependencies.
+
 ## [0.4.0]
 
 Add support for Dart.
