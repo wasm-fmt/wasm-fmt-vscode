@@ -35,7 +35,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.14.2
-        version: 20.14.2
+        version: 20.14.3
       '@types/vscode':
         specifier: ^1.88.0
         version: 1.90.0
@@ -183,8 +183,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@types/node@20.14.2':
-    resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
+  '@types/node@20.14.3':
+    resolution: {integrity: sha512-Nuzqa6WAxeGnve6SXqiPAM9rA++VQs+iLZ1DDd56y0gdvygSZlQvZuvdFPR3yLqkVxPu4WrO02iDEyH1g+wazw==}
 
   '@types/vscode@1.90.0':
     resolution: {integrity: sha512-oT+ZJL7qHS9Z8bs0+WKf/kQ27qWYR3trsXpq46YDjFqBsMLG4ygGGjPaJ2tyrH0wJzjOEmDyg9PDJBBhWg9pkQ==}
@@ -294,7 +294,7 @@ snapshots:
   '@esbuild/win32-x64@0.21.4':
     optional: true
 
-  '@types/node@20.14.2':
+  '@types/node@20.14.3':
     dependencies:
       undici-types: 5.26.5
 
