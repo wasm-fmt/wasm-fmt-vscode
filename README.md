@@ -57,4 +57,8 @@ wasm fmt is a multi-language code formatting tool with the following advantages:
 
   - [x] SQL
 
+- [yamlfmt](https://github.com/wasm-fmt/yamlfmt)
+  - [x] YAML
+  - [x] GitHub Actions Workflow
+
 [^1]: JavaScript / TypeScrip / JSON / JSONC are supported by clang-format as well, but web_fmt is used for better output.
