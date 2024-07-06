@@ -29,6 +29,9 @@ importers:
       '@wasm-fmt/web_fmt':
         specifier: ^0.1.10
         version: 0.1.10
+      '@wasm-fmt/yamlfmt':
+        specifier: ^0.0.2
+        version: 0.0.2
       '@wasm-fmt/zig_fmt':
         specifier: ^0.0.5
         version: 0.0.5
@@ -218,6 +221,9 @@ packages:
   '@wasm-fmt/web_fmt@0.1.10':
     resolution: {integrity: sha512-UuzxtV+c9RyI7PHyGjanyJCM+0/1OwV7wVXuwx0RGykp13pOZ86VM9fTCOJCDICo5GlbGk31UgsGJEXkFpN8pA==}
 
+  '@wasm-fmt/yamlfmt@0.0.2':
+    resolution: {integrity: sha512-I5vgaoKV7kXEvjicpZjqw4AL4/573TkEbmtg8NzZ5jubMCW4riPj/iiXPSWM6uJ9S3Q0Ad63IyPLY+q8ND9oOQ==}
+
   '@wasm-fmt/zig_fmt@0.0.5':
     resolution: {integrity: sha512-djNL+AuMT9NlTxSxHqKIJlViX2mflqTjfixXf2CQnM3AOFHRrYS/XNtXL+upnBGuMRRqIKaW7PXB1PAcM6aLkA==}
 
@@ -322,6 +328,8 @@ snapshots:
   '@wasm-fmt/sql_fmt@0.0.2': {}
 
   '@wasm-fmt/web_fmt@0.1.10': {}
+
+  '@wasm-fmt/yamlfmt@0.0.2': {}
 
   '@wasm-fmt/zig_fmt@0.0.5': {}
 

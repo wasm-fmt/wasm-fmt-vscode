@@ -40,6 +40,7 @@
 		"@wasm-fmt/ruff_fmt": "^0.5.10",
 		"@wasm-fmt/sql_fmt": "^0.0.2",
 		"@wasm-fmt/web_fmt": "^0.1.10",
+		"@wasm-fmt/yamlfmt": "^0.0.2",
 		"@wasm-fmt/zig_fmt": "^0.0.5"
 	},
 	"keywords": [

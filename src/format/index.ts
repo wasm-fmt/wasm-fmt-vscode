@@ -8,6 +8,7 @@ import lua_init, { formattingSubscription as lua_sub } from "./lua_fmt";
 import ruff_init, { formattingSubscription as ruff_sub } from "./ruff_fmt";
 import sql_init, { formattingSubscription as sql_sub } from "./sql_fmt";
 import web_init, { formattingSubscription as web_sub } from "./web_fmt";
+import yaml_init, { formattingSubscription as yaml_sub } from "./yamlfmt";
 import zig_init, { formattingSubscription as zig_sub } from "./zig_fmt";
 
 export default function init(context: vscode.ExtensionContext) {
@@ -19,6 +20,7 @@ export default function init(context: vscode.ExtensionContext) {
 		ruff_init(context),
 		sql_init(context),
 		web_init(context),
+		yaml_init(context),
 		zig_init(context),
 	]);
 }
@@ -32,6 +34,7 @@ export function formattingSubscription() {
 		ruff_sub(),
 		sql_sub(),
 		web_sub(),
+		yaml_sub(),
 		zig_sub(),
 	);
 }
