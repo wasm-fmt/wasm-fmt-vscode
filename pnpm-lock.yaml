@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@wasm-fmt/clang-format':
         specifier: ^18.0.0
-        version: 18.1.1
+        version: 18.1.8
       '@wasm-fmt/dart_fmt':
         specifier: ^0.1.1
         version: 0.1.1
@@ -38,10 +38,10 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.14.2
-        version: 20.14.2
+        version: 20.14.14
       '@types/vscode':
         specifier: ^1.88.0
-        version: 1.90.0
+        version: 1.92.0
       esbuild:
         specifier: ^0.23.0
         version: 0.23.0
@@ -192,15 +192,16 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@types/node@20.14.2':
-    resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
+  '@types/node@20.14.14':
+    resolution: {integrity: sha512-d64f00982fS9YoOgJkAMolK7MN8Iq3TDdVjchbYHdEmjth/DHowx82GnoA+tVUAN+7vxfYUgAzi+JXbKNd2SDQ==}
 
-  '@types/vscode@1.90.0':
-    resolution: {integrity: sha512-oT+ZJL7qHS9Z8bs0+WKf/kQ27qWYR3trsXpq46YDjFqBsMLG4ygGGjPaJ2tyrH0wJzjOEmDyg9PDJBBhWg9pkQ==}
+  '@types/vscode@1.92.0':
+    resolution: {integrity: sha512-DcZoCj17RXlzB4XJ7IfKdPTcTGDLYvTOcTNkvtjXWF+K2TlKzHHkBEXNWQRpBIXixNEUgx39cQeTFunY0E2msw==}
 
-  '@wasm-fmt/clang-format@18.1.1':
-    resolution: {integrity: sha512-Wy77o9ay+I6ZVUf7valgCG3N9QjXWp+l/vsQRet6NOm9LhiwhRMHcSFn3HM+03cacEU3ovCO1f4xVhHK5LWKog==}
+  '@wasm-fmt/clang-format@18.1.8':
+    resolution: {integrity: sha512-JWX9ILldydxP0/Z6ksCiyWbpN9mB7X1Kj8ESVGkZ3KA5aV363EEzTctHb/Y/FHXAsNIdWO7dp73OMNM0uCUPBg==}
     engines: {node: '>=16.17.0'}
+    hasBin: true
 
   '@wasm-fmt/dart_fmt@0.1.1':
     resolution: {integrity: sha512-nk/zSDkUyuMEevcZzhDjF3Cy0yFzisQzN7YFLqrOph+nZI9fzNijgXRHdCTdIA2P0+2M2mOWcF8+HxgqLKixQw==}
@@ -309,13 +310,13 @@ snapshots:
   '@esbuild/win32-x64@0.23.0':
     optional: true
 
-  '@types/node@20.14.2':
+  '@types/node@20.14.14':
     dependencies:
       undici-types: 5.26.5
 
-  '@types/vscode@1.90.0': {}
+  '@types/vscode@1.92.0': {}
 
-  '@wasm-fmt/clang-format@18.1.1': {}
+  '@wasm-fmt/clang-format@18.1.8': {}
 
   '@wasm-fmt/dart_fmt@0.1.1': {}
 
