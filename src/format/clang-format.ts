@@ -1,9 +1,17 @@
 import vscode = require("vscode");
-import clang_init, { format as clang_format } from "@wasm-fmt/clang-format";
+import clang_init, {
+	format as clang_format,
+	format_byte_range as clang_format_range,
+} from "@wasm-fmt/clang-format";
 import clang_wasm from "@wasm-fmt/clang-format/clang-format.wasm";
 import { Logger } from "../logger";
 
 const logger = new Logger("clang-format");
+const encoder = new TextEncoder();
+
+function bytelength(str: string) {
+	return encoder.encode(str).byteLength;
+}
 
 export default async function init(context: vscode.ExtensionContext) {
 	const wasm_uri = vscode.Uri.joinPath(context.extensionUri, clang_wasm);
@@ -13,7 +21,7 @@ export default async function init(context: vscode.ExtensionContext) {
 }
 
 export function formattingSubscription() {
-	return vscode.languages.registerDocumentFormattingEditProvider(
+	return vscode.languages.registerDocumentRangeFormattingEditProvider(
 		[
 			"c",
 			"cpp",
@@ -28,7 +36,11 @@ export function formattingSubscription() {
 			},
 		],
 		{
-			provideDocumentFormattingEdits(document, options, token) {
+			provideDocumentRangeFormattingEdits(
+				document: vscode.TextDocument,
+				range: vscode.Range,
+				options: vscode.FormattingOptions,
+			): vscode.ProviderResult<vscode.TextEdit[]> {
 				const text = document.getText();
 
 				const IndentWidth = options.tabSize;
@@ -45,22 +57,51 @@ export function formattingSubscription() {
 					UseTab,
 				});
 
-				logger.log(document.languageId, document.fileName, style);
-
 				try {
 					const filename = document.isUntitled
 						? languageMap[document.languageId]
 						: document.fileName;
 
-					const formatted = clang_format(text, filename, style);
-
-					const range = document.validateRange(
-						new vscode.Range(
-							document.positionAt(0),
-							document.positionAt(text.length),
-						),
+					const full_range = new vscode.Range(
+						document.positionAt(0),
+						document.positionAt(text.length),
 					);
-					return [vscode.TextEdit.replace(range, formatted)];
+
+					if (range.isEmpty || range.contains(full_range)) {
+						logger.log(
+							document.languageId,
+							document.fileName,
+							style,
+						);
+
+						const formatted = clang_format(text, filename, style);
+
+						return [vscode.TextEdit.replace(full_range, formatted)];
+					}
+
+					const [start, end] = [
+						document.offsetAt(range.start),
+						document.offsetAt(range.end),
+					];
+
+					const byte_start = bytelength(text.slice(0, start));
+					const byte_length = bytelength(text.slice(start, end));
+
+					logger.log(
+						document.languageId,
+						`${document.fileName}:${range.start.line}:${range.start.character};${range.end.line}:${range.end.character}`,
+						[byte_start, byte_length],
+						style,
+					);
+
+					const formatted = clang_format_range(
+						text,
+						[[byte_start, byte_length]],
+						filename,
+						style,
+					);
+
+					return [vscode.TextEdit.replace(full_range, formatted)];
 				} catch (e) {
 					logger.error(e);
 					return [];
