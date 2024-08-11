@@ -13,7 +13,7 @@ importers:
         version: 18.1.8
       '@wasm-fmt/dart_fmt':
         specifier: ^0.1.1
-        version: 0.1.1
+        version: 0.1.2
       '@wasm-fmt/gofmt':
         specifier: ^0.4.9
         version: 0.4.9
@@ -203,8 +203,8 @@ packages:
     engines: {node: '>=16.17.0'}
     hasBin: true
 
-  '@wasm-fmt/dart_fmt@0.1.1':
-    resolution: {integrity: sha512-nk/zSDkUyuMEevcZzhDjF3Cy0yFzisQzN7YFLqrOph+nZI9fzNijgXRHdCTdIA2P0+2M2mOWcF8+HxgqLKixQw==}
+  '@wasm-fmt/dart_fmt@0.1.2':
+    resolution: {integrity: sha512-pqer/5i+72kwhVLrTCo6ae3HYYIGNX6G6fs3lmZxG30dGrkyyBEE25iiF2B+UTs1W/QbnHhdXozwDREY3nm8pg==}
 
   '@wasm-fmt/gofmt@0.4.9':
     resolution: {integrity: sha512-YiJKASbwWHD9Rt4MD1Xwb5DanB0MQLYXgxeNGocxE5nu7ZyzPgm1nTn0sFVCJoxYMsGn5ypyXakuHTQtiJu4Ag==}
@@ -318,7 +318,7 @@ snapshots:
 
   '@wasm-fmt/clang-format@18.1.8': {}
 
-  '@wasm-fmt/dart_fmt@0.1.1': {}
+  '@wasm-fmt/dart_fmt@0.1.2': {}
 
   '@wasm-fmt/gofmt@0.4.9': {}
 
