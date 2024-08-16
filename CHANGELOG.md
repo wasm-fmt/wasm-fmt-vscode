@@ -4,6 +4,10 @@ All notable changes to the "wasm-fmt" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.5.1]
+
+Suport range formatting for C/C++ (clang-format).
+
 ## [0.5.0]
 Add support for YAML and GitHub Actions Workflow.
 
