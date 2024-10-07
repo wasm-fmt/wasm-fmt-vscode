@@ -28,7 +28,7 @@
 		"watch": "./esbuild.mjs --watch"
 	},
 	"devDependencies": {
-		"@types/node": "^20.14.2",
+		"@types/node": "^22.0.0",
 		"@types/vscode": "^1.88.0",
 		"esbuild": "^0.24.0"
 	},
