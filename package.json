@@ -36,7 +36,7 @@
 		"@wasm-fmt/clang-format": "^19.0.0",
 		"@wasm-fmt/dart_fmt": "^0.1.1",
 		"@wasm-fmt/gofmt": "^0.4.9",
-		"@wasm-fmt/lua_fmt": "^0.0.5",
+		"@wasm-fmt/lua_fmt": "^0.0.6",
 		"@wasm-fmt/ruff_fmt": "^0.6.0",
 		"@wasm-fmt/sql_fmt": "^0.0.2",
 		"@wasm-fmt/web_fmt": "^0.1.10",
