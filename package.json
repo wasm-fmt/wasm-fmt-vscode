@@ -28,19 +28,19 @@
 		"watch": "./esbuild.mjs --watch"
 	},
 	"devDependencies": {
-		"@types/node": "^22.0.0",
+		"@types/node": "^22.10.1",
 		"@types/vscode": "^1.88.0",
 		"esbuild": "^0.24.0"
 	},
 	"dependencies": {
-		"@wasm-fmt/clang-format": "^19.0.0",
-		"@wasm-fmt/dart_fmt": "^0.1.1",
+		"@wasm-fmt/clang-format": "^19.1.5",
+		"@wasm-fmt/dart_fmt": "^0.2.0",
 		"@wasm-fmt/gofmt": "^0.4.9",
-		"@wasm-fmt/lua_fmt": "^0.0.5",
-		"@wasm-fmt/ruff_fmt": "^0.6.0",
-		"@wasm-fmt/sql_fmt": "^0.0.2",
-		"@wasm-fmt/web_fmt": "^0.1.10",
-		"@wasm-fmt/yamlfmt": "^0.0.2",
+		"@wasm-fmt/lua_fmt": "^0.1.0",
+		"@wasm-fmt/ruff_fmt": "^0.8.1",
+		"@wasm-fmt/sql_fmt": "^0.0.3",
+		"@wasm-fmt/web_fmt": "^0.1.13",
+		"@wasm-fmt/yamlfmt": "^0.0.3",
 		"@wasm-fmt/zig_fmt": "^0.0.5"
 	},
 	"keywords": [

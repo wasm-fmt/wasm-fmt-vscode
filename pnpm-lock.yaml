@@ -9,39 +9,39 @@ importers:
   .:
     dependencies:
       '@wasm-fmt/clang-format':
-        specifier: ^19.0.0
-        version: 19.1.2
+        specifier: ^19.1.5
+        version: 19.1.5
       '@wasm-fmt/dart_fmt':
-        specifier: ^0.1.1
-        version: 0.1.2
+        specifier: ^0.2.0
+        version: 0.2.0
       '@wasm-fmt/gofmt':
         specifier: ^0.4.9
         version: 0.4.9
       '@wasm-fmt/lua_fmt':
-        specifier: ^0.0.5
-        version: 0.0.5
+        specifier: ^0.1.0
+        version: 0.1.0
       '@wasm-fmt/ruff_fmt':
-        specifier: ^0.6.0
-        version: 0.6.1
+        specifier: ^0.8.1
+        version: 0.8.1
       '@wasm-fmt/sql_fmt':
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.0.3
+        version: 0.0.3
       '@wasm-fmt/web_fmt':
-        specifier: ^0.1.10
-        version: 0.1.10
+        specifier: ^0.1.13
+        version: 0.1.13
       '@wasm-fmt/yamlfmt':
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.0.3
+        version: 0.0.3
       '@wasm-fmt/zig_fmt':
         specifier: ^0.0.5
         version: 0.0.5
     devDependencies:
       '@types/node':
-        specifier: ^22.0.0
+        specifier: ^22.10.1
         version: 22.10.1
       '@types/vscode':
         specifier: ^1.88.0
-        version: 1.92.0
+        version: 1.95.0
       esbuild:
         specifier: ^0.24.0
         version: 0.24.0
@@ -195,35 +195,35 @@ packages:
   '@types/node@22.10.1':
     resolution: {integrity: sha512-qKgsUwfHZV2WCWLAnVP1JqnpE6Im6h3Y0+fYgMTasNQ7V++CBX5OT1as0g0f+OyubbFqhf6XVNIsmN4IIhEgGQ==}
 
-  '@types/vscode@1.92.0':
-    resolution: {integrity: sha512-DcZoCj17RXlzB4XJ7IfKdPTcTGDLYvTOcTNkvtjXWF+K2TlKzHHkBEXNWQRpBIXixNEUgx39cQeTFunY0E2msw==}
+  '@types/vscode@1.95.0':
+    resolution: {integrity: sha512-0LBD8TEiNbet3NvWsmn59zLzOFu/txSlGxnv5yAFHCrhG9WvAnR3IvfHzMOs2aeWqgvNjq9pO99IUw8d3n+unw==}
 
-  '@wasm-fmt/clang-format@19.1.2':
-    resolution: {integrity: sha512-Zv8nrN0WpaTP4qyxHwESVBWbJZtzoScfGdeH0FBKM2RUU3seeBMSL5Jp97DbgMUwwBXqwXQp5evxZmiZ+BiaAQ==}
+  '@wasm-fmt/clang-format@19.1.5':
+    resolution: {integrity: sha512-ERZO/vHGLfAu78eRaswF0sTvTNuTMnQi18vyay7wbeMBR+vv+4h4GJ6q2aF2ET8Bpbfc4ClG7f0V0u+qlPWoMA==}
     engines: {node: '>=16.17.0'}
     hasBin: true
 
-  '@wasm-fmt/dart_fmt@0.1.2':
-    resolution: {integrity: sha512-pqer/5i+72kwhVLrTCo6ae3HYYIGNX6G6fs3lmZxG30dGrkyyBEE25iiF2B+UTs1W/QbnHhdXozwDREY3nm8pg==}
+  '@wasm-fmt/dart_fmt@0.2.0':
+    resolution: {integrity: sha512-lQ9gecurG7cwAmUDJn9Wv54dwDh9Gdz5D/aVxfqQg5g3ddpJrSEFGs/oiqnUavypeeJQDEd25836q6aDVhABXg==}
 
   '@wasm-fmt/gofmt@0.4.9':
     resolution: {integrity: sha512-YiJKASbwWHD9Rt4MD1Xwb5DanB0MQLYXgxeNGocxE5nu7ZyzPgm1nTn0sFVCJoxYMsGn5ypyXakuHTQtiJu4Ag==}
     engines: {node: '>=16.17.0'}
 
-  '@wasm-fmt/lua_fmt@0.0.5':
-    resolution: {integrity: sha512-86pWbM8KC4vszOpMCvtN7QqKnqNZvNWV5Pb90BGdFcaD1usf3b6qSsbcVz7jflQobxJj4NytrgOQeIivCIe0FQ==}
+  '@wasm-fmt/lua_fmt@0.1.0':
+    resolution: {integrity: sha512-TH1N2LN4yJf5Bka4+PGdekiWjntzKVUNESbUVOzMXTy9SqzIS6n6Lm0c20rg0VZ/5Ssl34WCCdQFExbgrbGz1w==}
 
-  '@wasm-fmt/ruff_fmt@0.6.1':
-    resolution: {integrity: sha512-7O3kVJ3JLYbo2l6+2LQHtPfq+1/Bna7tg8TE9sUft0Wj70qizlu7QJY6hC7KpJwW8LQjvSlLRtGv5W5wu0Pa5w==}
+  '@wasm-fmt/ruff_fmt@0.8.1':
+    resolution: {integrity: sha512-tIhKIkGjakyfbXn3Uy7y7QfxuRVGuszF6+jpoBB8ZL1jlu80akpueGmfiM3TmXdv0V73SveaAFWbkv7+J1WsFw==}
 
-  '@wasm-fmt/sql_fmt@0.0.2':
-    resolution: {integrity: sha512-pr6HacbCwE87e/Rvc8zwtzaSE2EfEf7JCNf9GEHobITMbR1f0PcAWjmfdBaNo22If0Kz1pp3m3h02X7Vx6OXoQ==}
+  '@wasm-fmt/sql_fmt@0.0.3':
+    resolution: {integrity: sha512-umeC6Tr1GwChLOJ3rmQBzfIIsWTzlt55IpA4jhtd6jHrF3OC9ua7junmfQIxSCxng+ZHUUWfRPmO6qpWXMej0Q==}
 
-  '@wasm-fmt/web_fmt@0.1.10':
-    resolution: {integrity: sha512-UuzxtV+c9RyI7PHyGjanyJCM+0/1OwV7wVXuwx0RGykp13pOZ86VM9fTCOJCDICo5GlbGk31UgsGJEXkFpN8pA==}
+  '@wasm-fmt/web_fmt@0.1.13':
+    resolution: {integrity: sha512-zq4N3fsmAfCVAp0v1V4peMGZbAYPavOYJsE1m8rtktHfu80+iR62upuHzP2SmjNWHZfayHfIQtYkUU81YfGcQg==}
 
-  '@wasm-fmt/yamlfmt@0.0.2':
-    resolution: {integrity: sha512-I5vgaoKV7kXEvjicpZjqw4AL4/573TkEbmtg8NzZ5jubMCW4riPj/iiXPSWM6uJ9S3Q0Ad63IyPLY+q8ND9oOQ==}
+  '@wasm-fmt/yamlfmt@0.0.3':
+    resolution: {integrity: sha512-GlBgjEwmCjg76c29erQZuGPyiAn1+nQnjfvrAbfZ0hn8uPNfafVM/JUa1cmoGKjUDoZzGxQx8eAQ4Pfx/3EeHQ==}
 
   '@wasm-fmt/zig_fmt@0.0.5':
     resolution: {integrity: sha512-djNL+AuMT9NlTxSxHqKIJlViX2mflqTjfixXf2CQnM3AOFHRrYS/XNtXL+upnBGuMRRqIKaW7PXB1PAcM6aLkA==}
@@ -314,23 +314,23 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
-  '@types/vscode@1.92.0': {}
+  '@types/vscode@1.95.0': {}
 
-  '@wasm-fmt/clang-format@19.1.2': {}
+  '@wasm-fmt/clang-format@19.1.5': {}
 
-  '@wasm-fmt/dart_fmt@0.1.2': {}
+  '@wasm-fmt/dart_fmt@0.2.0': {}
 
   '@wasm-fmt/gofmt@0.4.9': {}
 
-  '@wasm-fmt/lua_fmt@0.0.5': {}
+  '@wasm-fmt/lua_fmt@0.1.0': {}
 
-  '@wasm-fmt/ruff_fmt@0.6.1': {}
+  '@wasm-fmt/ruff_fmt@0.8.1': {}
 
-  '@wasm-fmt/sql_fmt@0.0.2': {}
+  '@wasm-fmt/sql_fmt@0.0.3': {}
 
-  '@wasm-fmt/web_fmt@0.1.10': {}
+  '@wasm-fmt/web_fmt@0.1.13': {}
 
-  '@wasm-fmt/yamlfmt@0.0.2': {}
+  '@wasm-fmt/yamlfmt@0.0.3': {}
 
   '@wasm-fmt/zig_fmt@0.0.5': {}
 
