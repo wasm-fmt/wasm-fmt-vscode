@@ -4,6 +4,10 @@ All notable changes to the "wasm-fmt" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.5.2]
+
+Bump dependencies.
+
 ## [0.5.1]
 
 Suport range formatting for C/C++ (clang-format).
