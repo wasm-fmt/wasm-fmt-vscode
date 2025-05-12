@@ -37,7 +37,7 @@
 		"@wasm-fmt/dart_fmt": "^0.2.0",
 		"@wasm-fmt/gofmt": "^0.4.9",
 		"@wasm-fmt/lua_fmt": "^0.1.0",
-		"@wasm-fmt/ruff_fmt": "^0.8.1",
+		"@wasm-fmt/ruff_fmt": "^0.10.0",
 		"@wasm-fmt/sql_fmt": "^0.1.0",
 		"@wasm-fmt/web_fmt": "^0.1.13",
 		"@wasm-fmt/yamlfmt": "^0.0.3",
