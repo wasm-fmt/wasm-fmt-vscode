@@ -33,8 +33,8 @@ importers:
         specifier: ^0.0.3
         version: 0.0.3
       '@wasm-fmt/zig_fmt':
-        specifier: ^0.0.5
-        version: 0.0.5
+        specifier: ^0.15.0
+        version: 0.15.0
     devDependencies:
       '@types/node':
         specifier: ^22.10.1
@@ -237,8 +237,8 @@ packages:
   '@wasm-fmt/yamlfmt@0.0.3':
     resolution: {integrity: sha512-GlBgjEwmCjg76c29erQZuGPyiAn1+nQnjfvrAbfZ0hn8uPNfafVM/JUa1cmoGKjUDoZzGxQx8eAQ4Pfx/3EeHQ==}
 
-  '@wasm-fmt/zig_fmt@0.0.5':
-    resolution: {integrity: sha512-djNL+AuMT9NlTxSxHqKIJlViX2mflqTjfixXf2CQnM3AOFHRrYS/XNtXL+upnBGuMRRqIKaW7PXB1PAcM6aLkA==}
+  '@wasm-fmt/zig_fmt@0.15.0':
+    resolution: {integrity: sha512-kf48YgbS+MnNVHbpmHiJpQ0mg5xFQNt1QwhJ7rrcXenloJeGmuAXfVAO4tZ6gkPc8VzYb9Cbo/OhqCxdJr4/EQ==}
 
   esbuild@0.27.1:
     resolution: {integrity: sha512-yY35KZckJJuVVPXpvjgxiCuVEJT67F6zDeVTv4rizyPrfGBUpZQsvmxnN+C371c2esD/hNMjj4tpBhuueLN7aA==}
@@ -350,7 +350,7 @@ snapshots:
 
   '@wasm-fmt/yamlfmt@0.0.3': {}
 
-  '@wasm-fmt/zig_fmt@0.0.5': {}
+  '@wasm-fmt/zig_fmt@0.15.0': {}
 
   esbuild@0.27.1:
     optionalDependencies:

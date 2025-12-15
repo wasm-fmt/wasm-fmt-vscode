@@ -41,7 +41,7 @@
 		"@wasm-fmt/sql_fmt": "^0.1.0",
 		"@wasm-fmt/web_fmt": "^0.1.13",
 		"@wasm-fmt/yamlfmt": "^0.0.3",
-		"@wasm-fmt/zig_fmt": "^0.0.5"
+		"@wasm-fmt/zig_fmt": "^0.15.0"
 	},
 	"keywords": [
 		"prettier",
