@@ -30,8 +30,8 @@ importers:
         specifier: ^0.1.13
         version: 0.1.14
       '@wasm-fmt/yamlfmt':
-        specifier: ^0.0.3
-        version: 0.0.3
+        specifier: ^0.1.0
+        version: 0.1.2
       '@wasm-fmt/zig_fmt':
         specifier: ^0.15.0
         version: 0.15.0
@@ -234,8 +234,8 @@ packages:
   '@wasm-fmt/web_fmt@0.1.14':
     resolution: {integrity: sha512-EawlrzUBpTvv/RklB6iLuYdZrtKAU7sesV+utmO/vdRzRofyn8J5AqO5xEkXIsyRA3jB1VEYk5FeDyJz9S60yg==}
 
-  '@wasm-fmt/yamlfmt@0.0.3':
-    resolution: {integrity: sha512-GlBgjEwmCjg76c29erQZuGPyiAn1+nQnjfvrAbfZ0hn8uPNfafVM/JUa1cmoGKjUDoZzGxQx8eAQ4Pfx/3EeHQ==}
+  '@wasm-fmt/yamlfmt@0.1.2':
+    resolution: {integrity: sha512-ji6BQumxj8n6+gFjowfi0iymS56vvrNyj+elG3tLqIkHzbLGtjtq8ZWJWoc2OEkjcuDBnKF+ASzZVwS4ftu8fg==}
 
   '@wasm-fmt/zig_fmt@0.15.0':
     resolution: {integrity: sha512-kf48YgbS+MnNVHbpmHiJpQ0mg5xFQNt1QwhJ7rrcXenloJeGmuAXfVAO4tZ6gkPc8VzYb9Cbo/OhqCxdJr4/EQ==}
@@ -348,7 +348,7 @@ snapshots:
 
   '@wasm-fmt/web_fmt@0.1.14': {}
 
-  '@wasm-fmt/yamlfmt@0.0.3': {}
+  '@wasm-fmt/yamlfmt@0.1.2': {}
 
   '@wasm-fmt/zig_fmt@0.15.0': {}
 
