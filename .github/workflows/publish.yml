@@ -26,7 +26,7 @@ jobs:
                       - args: [--global, "@vscode/vsce"]
 
             - name: Package
-              run: vsce package
+              run: vsce package --no-dependencies
 
             - name: Publish to Github Releases
               uses: softprops/action-gh-release@69320dbe05506a9a39fc8ae11030b214ec2d1f87
@@ -35,6 +35,6 @@ jobs:
                       *.vsix
 
             - name: Publish to VS Code Marketplace
-              run: vsce publish
+              run: vsce publish --no-dependencies
               env:
                   VSCE_PAT: ${{ secrets.VSCE_PAT }}
