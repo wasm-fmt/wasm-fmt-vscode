@@ -12,8 +12,8 @@ importers:
         specifier: ^20.0.0
         version: 20.1.7
       '@wasm-fmt/dart_fmt':
-        specifier: ^0.2.0
-        version: 0.2.0
+        specifier: ^0.3.0
+        version: 0.3.0
       '@wasm-fmt/gofmt':
         specifier: ^0.4.9
         version: 0.4.9
@@ -215,8 +215,8 @@ packages:
     engines: {node: '>=16.17.0'}
     hasBin: true
 
-  '@wasm-fmt/dart_fmt@0.2.0':
-    resolution: {integrity: sha512-lQ9gecurG7cwAmUDJn9Wv54dwDh9Gdz5D/aVxfqQg5g3ddpJrSEFGs/oiqnUavypeeJQDEd25836q6aDVhABXg==}
+  '@wasm-fmt/dart_fmt@0.3.0':
+    resolution: {integrity: sha512-aE1G13tA/E8sAHMCPkiY2kLNAfPEaJ42YeWnPHNIHCvOK6PN65iE8M8dgRjxBjiI7q8cvb7mRnIfCCTrwCkGKw==}
 
   '@wasm-fmt/gofmt@0.4.9':
     resolution: {integrity: sha512-YiJKASbwWHD9Rt4MD1Xwb5DanB0MQLYXgxeNGocxE5nu7ZyzPgm1nTn0sFVCJoxYMsGn5ypyXakuHTQtiJu4Ag==}
@@ -336,7 +336,7 @@ snapshots:
 
   '@wasm-fmt/clang-format@20.1.7': {}
 
-  '@wasm-fmt/dart_fmt@0.2.0': {}
+  '@wasm-fmt/dart_fmt@0.3.0': {}
 
   '@wasm-fmt/gofmt@0.4.9': {}
 
