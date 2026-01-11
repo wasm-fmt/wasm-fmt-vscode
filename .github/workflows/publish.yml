@@ -29,7 +29,7 @@ jobs:
               run: vsce package --no-dependencies
 
             - name: Publish to Github Releases
-              uses: softprops/action-gh-release@69320dbe05506a9a39fc8ae11030b214ec2d1f87
+              uses: softprops/action-gh-release@78237c54eb15310cb292a15480c4be010be47aeb
               with:
                   files: |
                       *.vsix
