@@ -15,8 +15,8 @@ importers:
         specifier: ^0.3.0
         version: 0.3.0
       '@wasm-fmt/gofmt':
-        specifier: ^0.5.0
-        version: 0.5.1
+        specifier: ^0.7.0
+        version: 0.7.2
       '@wasm-fmt/lua_fmt':
         specifier: ^0.2.0
         version: 0.2.0
@@ -218,8 +218,8 @@ packages:
   '@wasm-fmt/dart_fmt@0.3.0':
     resolution: {integrity: sha512-aE1G13tA/E8sAHMCPkiY2kLNAfPEaJ42YeWnPHNIHCvOK6PN65iE8M8dgRjxBjiI7q8cvb7mRnIfCCTrwCkGKw==}
 
-  '@wasm-fmt/gofmt@0.5.1':
-    resolution: {integrity: sha512-gkar6Orn4Ipv/ZLzxihZWXqBbVRJEfveMImNnb2SO2Sv/xAKtbUcUmfqqGJGFzaS/Hk5RiwXaOCCKFt6auwacA==}
+  '@wasm-fmt/gofmt@0.7.2':
+    resolution: {integrity: sha512-j8cT1TppOivxc6mSPN7SF6sMBmmS/9pH0aTxYjJhtosmRtZBehyPU+bxMHotkWxgVevVAKr75nVydkwOPHcvXw==}
     engines: {node: '>=16.17.0'}
 
   '@wasm-fmt/lua_fmt@0.2.0':
@@ -338,7 +338,7 @@ snapshots:
 
   '@wasm-fmt/dart_fmt@0.3.0': {}
 
-  '@wasm-fmt/gofmt@0.5.1': {}
+  '@wasm-fmt/gofmt@0.7.2': {}
 
   '@wasm-fmt/lua_fmt@0.2.0': {}
 
