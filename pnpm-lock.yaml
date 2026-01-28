@@ -24,8 +24,8 @@ importers:
         specifier: ^0.14.0
         version: 0.14.11
       '@wasm-fmt/sql_fmt':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.2.0
+        version: 0.2.1
       '@wasm-fmt/web_fmt':
         specifier: ^0.1.13
         version: 0.1.17
@@ -228,8 +228,8 @@ packages:
   '@wasm-fmt/ruff_fmt@0.14.11':
     resolution: {integrity: sha512-+RFKA0OpGkyg7jPPGBJGR7lbNRClHUbRdMAUaM2/pts97nC/TnmlrJXNaZ2XVl5XSw69yhDKzoq3mLIzzojExQ==}
 
-  '@wasm-fmt/sql_fmt@0.1.0':
-    resolution: {integrity: sha512-f1tH16RL5Wt4C19Ztw6mFa1yudpsRFduHzri/zy3D2cvB8NhAkUOGybjOvoeFB6qiXfGMS9LadBduvKQCoxKew==}
+  '@wasm-fmt/sql_fmt@0.2.1':
+    resolution: {integrity: sha512-3dBApOq0a4rwS1uR/GruC3YEUMtQqhNh5+E3v1q4EU/PduQwNNvCaiZZ42eqESv3l2/uwd4OIx/gBr3uoY4TfA==}
 
   '@wasm-fmt/web_fmt@0.1.17':
     resolution: {integrity: sha512-VuS0LFFV1d9ehC9KmPIwzlZkGhuNMMW9g77jvzJrEcEKJJoy0C8YHVh8BoO85psO005uAGKyZrcLCrnD5QpBYw==}
@@ -344,7 +344,7 @@ snapshots:
 
   '@wasm-fmt/ruff_fmt@0.14.11': {}
 
-  '@wasm-fmt/sql_fmt@0.1.0': {}
+  '@wasm-fmt/sql_fmt@0.2.1': {}
 
   '@wasm-fmt/web_fmt@0.1.17': {}
 
