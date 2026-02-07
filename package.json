@@ -18,6 +18,9 @@
 		"Formatters"
 	],
 	"icon": "images/icon.png",
+	"sponsor": {
+		"url": "https://github.com/sponsors/magic-akari"
+	},
 	"activationEvents": [
 		"onStartupFinished",
 		"onLanguage:astro",
