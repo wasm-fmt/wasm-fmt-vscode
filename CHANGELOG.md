@@ -4,7 +4,7 @@ All notable changes to the "wasm-fmt" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [0.6.0]
 
 Add support for more formatters:
 
