@@ -68,7 +68,8 @@
 	"scripts": {
 		"vscode:prepublish": "./esbuild.mjs",
 		"compile": "./esbuild.mjs",
-		"watch": "./esbuild.mjs --watch"
+		"watch": "./esbuild.mjs --watch",
+		"version": "node scripts/update-changelog.mjs && git add CHANGELOG.md"
 	},
 	"devDependencies": {
 		"@types/node": "^22.10.1",
