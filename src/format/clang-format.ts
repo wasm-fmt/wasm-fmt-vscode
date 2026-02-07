@@ -1,125 +1,42 @@
 import vscode = require("vscode");
-import clang_init, {
-	format as clang_format,
-	format_byte_range as clang_format_range,
-} from "@wasm-fmt/clang-format";
-import clang_wasm from "@wasm-fmt/clang-format/clang-format.wasm";
-import { Logger } from "../logger";
 
-const logger = new Logger("clang-format");
-const encoder = new TextEncoder();
+import wasm from "@wasm-fmt/clang-format/clang-format.wasm";
+import initWasm, { format, format_byte_range } from "@wasm-fmt/clang-format";
+import { utf16OffsetToUtf8 } from "../utils";
 
-function bytelength(str: string) {
-	return encoder.encode(str).byteLength;
+let inited: Promise<void> | null = null;
+let wasm_uri: vscode.Uri = null!;
+
+let logger: vscode.LogOutputChannel = null!;
+
+export function init(context: vscode.ExtensionContext) {
+	wasm_uri = vscode.Uri.joinPath(context.extensionUri, wasm);
 }
 
-export default async function init(context: vscode.ExtensionContext) {
-	const wasm_uri = vscode.Uri.joinPath(context.extensionUri, clang_wasm);
+export async function load() {
+	if (inited) {
+		return inited;
+	}
 
-	const bits = await vscode.workspace.fs.readFile(wasm_uri);
-	await clang_init(bits);
-}
-
-export function formattingSubscription() {
-	return vscode.languages.registerDocumentRangeFormattingEditProvider(
-		[
-			"c",
-			"cpp",
-			"csharp",
-			"java",
-			"objective-c",
-			"objective-cpp",
-			"proto",
-			{
-				pattern: "**/*.proto",
-				scheme: "file",
-			},
-		],
-		{
-			provideDocumentRangeFormattingEdits(
-				document: vscode.TextDocument,
-				range: vscode.Range,
-				options: vscode.FormattingOptions,
-			): vscode.ProviderResult<vscode.TextEdit[]> {
-				const text = document.getText();
-
-				const IndentWidth = options.tabSize;
-				const TabWidth = options.tabSize;
-
-				const UseTab = options.insertSpaces
-					? "Never"
-					: "ForIndentation";
-
-				const style = JSON.stringify({
-					...defaultConfig(document.languageId),
-					IndentWidth,
-					TabWidth,
-					UseTab,
+	logger = vscode.window.createOutputChannel("wasm-fmt/clang-format", {
+		log: true,
+	});
+	inited = new Promise((resolve, reject) => {
+		vscode.workspace.fs.readFile(wasm_uri).then(
+			(bits) => {
+				initWasm(bits).then(() => {
+					logger.info("clang-format inited");
+					resolve();
 				});
-
-				try {
-					const filename = document.isUntitled
-						? languageMap[document.languageId]
-						: document.fileName;
-
-					const full_range = new vscode.Range(
-						document.positionAt(0),
-						document.positionAt(text.length),
-					);
-
-					if (range.isEmpty || range.contains(full_range)) {
-						logger.log(
-							document.languageId,
-							document.fileName,
-							style,
-						);
-
-						const formatted = clang_format(text, filename, style);
-
-						return [vscode.TextEdit.replace(full_range, formatted)];
-					}
-
-					const [start, end] = [
-						document.offsetAt(range.start),
-						document.offsetAt(range.end),
-					];
-
-					const byte_start = bytelength(text.slice(0, start));
-					const byte_length = bytelength(text.slice(start, end));
-
-					logger.log(
-						document.languageId,
-						`${document.fileName}:${range.start.line}:${range.start.character};${range.end.line}:${range.end.character}`,
-						[byte_start, byte_length],
-						style,
-					);
-
-					const formatted = clang_format_range(
-						text,
-						[[byte_start, byte_length]],
-						filename,
-						style,
-					);
-
-					return [vscode.TextEdit.replace(full_range, formatted)];
-				} catch (e) {
-					logger.error(e);
-					return [];
-				}
 			},
-		},
-	);
+			(error) => {
+				logger.error("failed to init clang-format", error);
+				reject(error);
+			},
+		);
+	});
+	return inited;
 }
-
-const languageMap: Record<string, string> = {
-	c: "main.c",
-	cpp: "main.cc",
-	csharp: "main.cs",
-	java: "Main.java",
-	"objective-c": "main.m",
-	"objective-cpp": "main.mm",
-	proto: "main.proto",
-};
 
 function defaultConfig(languageId: string) {
 	const config: Record<string, any> = { BasedOnStyle: "Chromium" };
@@ -133,13 +50,119 @@ function defaultConfig(languageId: string) {
 			config.BasedOnStyle = "Google";
 			break;
 		}
-		case "javascript":
-		case "typescript": {
-			config.JavaScriptQuotes = "Double";
-			config.AllowShortBlocksOnASingleLine = "Empty";
+		case "objective-c":
+		case "objective-cpp": {
+			config.BasedOnStyle = "WebKit";
 			break;
 		}
 	}
 
 	return config;
+}
+
+export function formatCode(
+	code: string,
+	filename: string,
+	languageId: string,
+	options: vscode.FormattingOptions,
+) {
+	const IndentWidth = options.tabSize;
+	const TabWidth = options.tabSize;
+	const UseTab = options.insertSpaces ? "Never" : "ForIndentation";
+
+	const style = JSON.stringify({
+		...defaultConfig(languageId),
+		IndentWidth,
+		TabWidth,
+		UseTab,
+	});
+
+	logger.info("formatting", filename, "with options", options);
+
+	try {
+		return format(code, filename, style);
+	} catch (error) {
+		logger.error("failed to format", filename, error);
+		return null;
+	}
+}
+
+const selector: vscode.DocumentSelector = [
+	"c",
+	"cpp",
+	"csharp",
+	"java",
+	"objective-c",
+	"objective-cpp",
+	"proto",
+	"verilog",
+	"systemverilog",
+	{ pattern: "**/*.proto", scheme: "file" },
+	{ pattern: "**/*.{v,vh,vl}", scheme: "file" },
+	{ pattern: "**/*.{sv,svh,SV}", scheme: "file" },
+];
+
+export function formattingSubscription(): vscode.Disposable {
+	return vscode.Disposable.from(
+		vscode.workspace.onDidOpenTextDocument((document) => {
+			if (vscode.languages.match(selector, document)) {
+				load();
+			}
+		}),
+		vscode.window.onDidChangeActiveTextEditor((editor) => {
+			if (editor && vscode.languages.match(selector, editor.document)) {
+				load();
+			}
+		}),
+		vscode.languages.registerDocumentFormattingEditProvider(selector, {
+			provideDocumentFormattingEdits(document, options, token) {
+				const text = document.getText();
+				const formatted = formatCode(text, document.fileName, document.languageId, options);
+
+				if (formatted === null) {
+					return [];
+				}
+
+				const fullRange = new vscode.Range(
+					document.positionAt(0),
+					document.positionAt(text.length),
+				);
+
+				return [vscode.TextEdit.replace(fullRange, formatted)];
+			},
+		}),
+		vscode.languages.registerDocumentRangeFormattingEditProvider(selector, {
+			provideDocumentRangeFormattingEdits(document, range, options, token) {
+				const text = document.getText();
+
+				logger.info("formatting range", document.fileName, "with options", options);
+
+				const fullRange = new vscode.Range(
+					document.positionAt(0),
+					document.positionAt(text.length),
+				);
+
+				try {
+					const start = utf16OffsetToUtf8(text, document.offsetAt(range.start));
+					const end = utf16OffsetToUtf8(text, document.offsetAt(range.end));
+					const length = end - start;
+					const result = format_byte_range(
+						text,
+						[[start, length]],
+						document.fileName,
+						JSON.stringify({
+							...defaultConfig(document.languageId),
+							IndentWidth: options.tabSize,
+							TabWidth: options.tabSize,
+							UseTab: options.insertSpaces ? "Never" : "ForIndentation",
+						}),
+					);
+					return [vscode.TextEdit.replace(fullRange, result)];
+				} catch (error) {
+					logger.error("failed to format range", document.fileName, error);
+					return [];
+				}
+			},
+		}),
+	);
 }

@@ -30,18 +30,22 @@
 	"devDependencies": {
 		"@types/node": "^22.10.1",
 		"@types/vscode": "^1.88.0",
-		"esbuild": "^0.27.0"
+		"esbuild": "^0.27.3"
 	},
 	"dependencies": {
-		"@wasm-fmt/clang-format": "^21.0.0",
-		"@wasm-fmt/dart_fmt": "^0.3.0",
-		"@wasm-fmt/gofmt": "^0.5.0",
-		"@wasm-fmt/lua_fmt": "^0.2.0",
-		"@wasm-fmt/ruff_fmt": "^0.14.0",
-		"@wasm-fmt/sql_fmt": "^0.1.0",
-		"@wasm-fmt/web_fmt": "^0.1.13",
-		"@wasm-fmt/yamlfmt": "^0.1.0",
-		"@wasm-fmt/zig_fmt": "^0.15.0"
+		"@wasm-fmt/clang-format": "^21.1.8",
+		"@wasm-fmt/dart_fmt": "^0.4.0",
+		"@wasm-fmt/gofmt": "^0.7.2",
+		"@wasm-fmt/lua_fmt": "^0.3.2",
+		"@wasm-fmt/mago_fmt": "0.6.0",
+		"@wasm-fmt/markdown": "0.1.5",
+		"@wasm-fmt/ruff_fmt": "^0.15.0",
+		"@wasm-fmt/shfmt": "0.2.4",
+		"@wasm-fmt/sql_fmt": "^0.2.1",
+		"@wasm-fmt/taplo_fmt": "0.2.5",
+		"@wasm-fmt/web_fmt": "^0.2.3",
+		"@wasm-fmt/yamlfmt": "^0.2.1",
+		"@wasm-fmt/zig_fmt": "^0.15.2"
 	},
 	"keywords": [
 		"prettier",

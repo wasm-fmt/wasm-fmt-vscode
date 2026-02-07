@@ -1,38 +1,82 @@
 import vscode = require("vscode");
-import dart_init, { format as dart_fmt } from "@wasm-fmt/dart_fmt";
-import dart_wasm from "@wasm-fmt/dart_fmt/dart_fmt.wasm";
-import { Logger } from "../logger";
 
-const logger = new Logger("dart-fmt");
+import wasm from "@wasm-fmt/dart_fmt/wasm";
+import { format, initSync } from "@wasm-fmt/dart_fmt/web";
 
-export default async function init(context: vscode.ExtensionContext) {
-	const wasm_uri = vscode.Uri.joinPath(context.extensionUri, dart_wasm);
+let inited: Promise<void> | null = null;
+let wasm_uri: vscode.Uri = null!;
 
-	const bits = await vscode.workspace.fs.readFile(wasm_uri);
-	await dart_init(bits);
+let logger: vscode.LogOutputChannel = null!;
+
+export function init(context: vscode.ExtensionContext) {
+	wasm_uri = vscode.Uri.joinPath(context.extensionUri, wasm);
 }
 
-export function formattingSubscription() {
-	return vscode.languages.registerDocumentFormattingEditProvider("dart", {
-		provideDocumentFormattingEdits(document, options, token) {
-			const text = document.getText();
+export async function load() {
+	if (inited) {
+		return inited;
+	}
 
-			logger.info(document.languageId, document.fileName);
-
-			try {
-				const formatted = dart_fmt(text, document.fileName);
-
-				const range = document.validateRange(
-					new vscode.Range(
-						document.positionAt(0),
-						document.positionAt(text.length),
-					),
-				);
-				return [vscode.TextEdit.replace(range, formatted)];
-			} catch (error) {
-				logger.error(error);
-				return [];
-			}
-		},
+	logger = vscode.window.createOutputChannel("wasm-fmt/dart", { log: true });
+	inited = new Promise((resolve, reject) => {
+		vscode.workspace.fs.readFile(wasm_uri).then(
+			(bits) => {
+				initSync(bits);
+				logger.info("dart_fmt inited");
+				resolve();
+			},
+			(error) => {
+				logger.error("failed to init dart_fmt", error);
+				reject(error);
+			},
+		);
 	});
+	return inited;
+}
+
+export function formatCode(code: string, filename: string, options: vscode.FormattingOptions) {
+	logger.info("formatting", filename, "with options", options);
+
+	try {
+		return format(code, filename, {
+			line_width: options.tabSize * 10,
+		});
+	} catch (error) {
+		logger.error("failed to format", filename, error);
+		return null;
+	}
+}
+
+const selector: vscode.DocumentSelector = ["dart", { pattern: "**/*.dart", scheme: "file" }];
+
+export function formattingSubscription(): vscode.Disposable {
+	return vscode.Disposable.from(
+		vscode.workspace.onDidOpenTextDocument((document) => {
+			if (vscode.languages.match(selector, document)) {
+				load();
+			}
+		}),
+		vscode.window.onDidChangeActiveTextEditor((editor) => {
+			if (editor && vscode.languages.match(selector, editor.document)) {
+				load();
+			}
+		}),
+		vscode.languages.registerDocumentFormattingEditProvider(selector, {
+			provideDocumentFormattingEdits(document, options, token) {
+				const text = document.getText();
+				const formatted = formatCode(text, document.fileName, options);
+
+				if (formatted === null) {
+					return [];
+				}
+
+				const fullRange = new vscode.Range(
+					document.positionAt(0),
+					document.positionAt(text.length),
+				);
+
+				return [vscode.TextEdit.replace(fullRange, formatted)];
+			},
+		}),
+	);
 }

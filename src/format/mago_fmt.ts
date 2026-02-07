@@ -1,7 +1,7 @@
 import vscode = require("vscode");
 
-import wasm from "@wasm-fmt/zig_fmt/zig_fmt.wasm";
-import initWasm, { format } from "@wasm-fmt/zig_fmt";
+import wasm from "@wasm-fmt/mago_fmt/wasm";
+import { format, initSync } from "@wasm-fmt/mago_fmt/web";
 
 let inited: Promise<void> | null = null;
 let wasm_uri: vscode.Uri = null!;
@@ -17,18 +17,16 @@ export async function load() {
 		return inited;
 	}
 
-	logger = vscode.window.createOutputChannel("wasm-fmt/zig", { log: true });
+	logger = vscode.window.createOutputChannel("wasm-fmt/php", { log: true });
 	inited = new Promise((resolve, reject) => {
 		vscode.workspace.fs.readFile(wasm_uri).then(
 			(bits) => {
-				// [TODO]: use initSync
-				initWasm(bits).then(() => {
-					logger.info("zig_fmt inited");
-					resolve();
-				});
+				initSync(bits);
+				logger.info("mago_fmt inited");
+				resolve();
 			},
 			(error) => {
-				logger.error("failed to init zig_fmt", error);
+				logger.error("failed to init mago_fmt", error);
 				reject(error);
 			},
 		);
@@ -40,14 +38,17 @@ export function formatCode(code: string, filename: string, options: vscode.Forma
 	logger.info("formatting", filename, "with options", options);
 
 	try {
-		return format(code);
+		return format(code, filename, {
+			"tab-width": options.tabSize,
+			"use-tabs": !options.insertSpaces,
+		});
 	} catch (error) {
 		logger.error("failed to format", filename, error);
 		return null;
 	}
 }
 
-const selector: vscode.DocumentSelector = ["zig", { pattern: "**/*.zig", scheme: "file" }];
+const selector: vscode.DocumentSelector = ["php", { pattern: "**/*.php", scheme: "file" }];
 
 export function formattingSubscription(): vscode.Disposable {
 	return vscode.Disposable.from(

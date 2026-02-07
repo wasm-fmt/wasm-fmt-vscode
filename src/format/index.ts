@@ -1,40 +1,49 @@
 import vscode = require("vscode");
-import clang_init, {
-	formattingSubscription as clang_sub,
-} from "./clang-format";
-import dart_init, { formattingSubscription as dart_sub } from "./dart_fmt";
-import go_init, { formattingSubscription as go_sub } from "./gofmt";
-import lua_init, { formattingSubscription as lua_sub } from "./lua_fmt";
-import ruff_init, { formattingSubscription as ruff_sub } from "./ruff_fmt";
-import sql_init, { formattingSubscription as sql_sub } from "./sql_fmt";
-import web_init, { formattingSubscription as web_sub } from "./web_fmt";
-import yaml_init, { formattingSubscription as yaml_sub } from "./yamlfmt";
-import zig_init, { formattingSubscription as zig_sub } from "./zig_fmt";
+
+import * as clang_format from "./clang-format";
+import * as dart_fmt from "./dart_fmt";
+import * as gofmt from "./gofmt";
+import * as lua_fmt from "./lua_fmt";
+import * as mago_fmt from "./mago_fmt";
+import * as markdown_fmt from "./markdown_fmt";
+import * as ruff_fmt from "./ruff_fmt";
+import * as shfmt from "./shfmt";
+import * as sql_fmt from "./sql_fmt";
+import * as taplo_fmt from "./taplo_fmt";
+import * as web_fmt from "./web_fmt";
+import * as yamlfmt from "./yamlfmt";
+import * as zig_fmt from "./zig_fmt";
 
 export default function init(context: vscode.ExtensionContext) {
-	return Promise.all([
-		clang_init(context),
-		dart_init(context),
-		go_init(context),
-		lua_init(context),
-		ruff_init(context),
-		sql_init(context),
-		web_init(context),
-		yaml_init(context),
-		zig_init(context),
-	]);
+	clang_format.init(context);
+	dart_fmt.init(context);
+	gofmt.init(context);
+	lua_fmt.init(context);
+	mago_fmt.init(context);
+	markdown_fmt.init(context);
+	ruff_fmt.init(context);
+	shfmt.init(context);
+	sql_fmt.init(context);
+	taplo_fmt.init(context);
+	web_fmt.init(context);
+	yamlfmt.init(context);
+	zig_fmt.init(context);
 }
 
 export function formattingSubscription() {
 	return vscode.Disposable.from(
-		clang_sub(),
-		dart_sub(),
-		go_sub(),
-		lua_sub(),
-		ruff_sub(),
-		sql_sub(),
-		web_sub(),
-		yaml_sub(),
-		zig_sub(),
+		clang_format.formattingSubscription(),
+		dart_fmt.formattingSubscription(),
+		gofmt.formattingSubscription(),
+		lua_fmt.formattingSubscription(),
+		mago_fmt.formattingSubscription(),
+		markdown_fmt.formattingSubscription(),
+		ruff_fmt.formattingSubscription(),
+		shfmt.formattingSubscription(),
+		sql_fmt.formattingSubscription(),
+		taplo_fmt.formattingSubscription(),
+		web_fmt.formattingSubscription(),
+		yamlfmt.formattingSubscription(),
+		zig_fmt.formattingSubscription(),
 	);
 }

@@ -1,38 +1,80 @@
 import vscode = require("vscode");
-import go_init, { format as gofmt } from "@wasm-fmt/gofmt";
-import go_wasm from "@wasm-fmt/gofmt/gofmt.wasm";
-import { Logger } from "../logger";
 
-const logger = new Logger("gofmt");
+import wasm from "@wasm-fmt/gofmt/wasm";
+import { format, initSync } from "@wasm-fmt/gofmt/web";
 
-export default async function init(context: vscode.ExtensionContext) {
-	const wasm_uri = vscode.Uri.joinPath(context.extensionUri, go_wasm);
+let inited: Promise<void> | null = null;
+let wasm_uri: vscode.Uri = null!;
 
-	const bits = await vscode.workspace.fs.readFile(wasm_uri);
-	await go_init(bits);
+let logger: vscode.LogOutputChannel = null!;
+
+export function init(context: vscode.ExtensionContext) {
+	wasm_uri = vscode.Uri.joinPath(context.extensionUri, wasm);
 }
 
-export function formattingSubscription() {
-	return vscode.languages.registerDocumentFormattingEditProvider("go", {
-		provideDocumentFormattingEdits(document, options, token) {
-			const text = document.getText();
+export async function load() {
+	if (inited) {
+		return inited;
+	}
 
-			logger.log(document.languageId, document.fileName);
-
-			try {
-				const formatted = gofmt(text);
-
-				const range = document.validateRange(
-					new vscode.Range(
-						document.positionAt(0),
-						document.positionAt(text.length),
-					),
-				);
-				return [vscode.TextEdit.replace(range, formatted)];
-			} catch (error) {
-				logger.error(error);
-				return [];
-			}
-		},
+	logger = vscode.window.createOutputChannel("wasm-fmt/go", { log: true });
+	inited = new Promise((resolve, reject) => {
+		vscode.workspace.fs.readFile(wasm_uri).then(
+			(bits) => {
+				initSync(bits);
+				logger.info("gofmt inited");
+				resolve();
+			},
+			(error) => {
+				logger.error("failed to init gofmt", error);
+				reject(error);
+			},
+		);
 	});
+	return inited;
+}
+
+export function formatCode(code: string, filename: string, options: vscode.FormattingOptions) {
+	logger.info("formatting", filename, "with options", options);
+
+	try {
+		return format(code);
+	} catch (error) {
+		logger.error("failed to format", filename, error);
+		return null;
+	}
+}
+
+const selector: vscode.DocumentSelector = ["go", { pattern: "**/*.go", scheme: "file" }];
+
+export function formattingSubscription(): vscode.Disposable {
+	return vscode.Disposable.from(
+		vscode.workspace.onDidOpenTextDocument((document) => {
+			if (vscode.languages.match(selector, document)) {
+				load();
+			}
+		}),
+		vscode.window.onDidChangeActiveTextEditor((editor) => {
+			if (editor && vscode.languages.match(selector, editor.document)) {
+				load();
+			}
+		}),
+		vscode.languages.registerDocumentFormattingEditProvider(selector, {
+			provideDocumentFormattingEdits(document, options, token) {
+				const text = document.getText();
+				const formatted = formatCode(text, document.fileName, options);
+
+				if (formatted === null) {
+					return [];
+				}
+
+				const fullRange = new vscode.Range(
+					document.positionAt(0),
+					document.positionAt(text.length),
+				);
+
+				return [vscode.TextEdit.replace(fullRange, formatted)];
+			},
+		}),
+	);
 }
