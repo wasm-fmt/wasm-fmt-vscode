@@ -4,6 +4,16 @@ All notable changes to the "wasm-fmt" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [Unreleased]
+
+Add support for more formatters:
+
+- PHP
+- Markdown
+- Shell script
+- TOML
+- GraphQL
+
 ## [0.5.2]
 
 Bump dependencies.
@@ -13,6 +23,7 @@ Bump dependencies.
 Suport range formatting for C/C++ (clang-format).
 
 ## [0.5.0]
+
 Add support for YAML and GitHub Actions Workflow.
 
 ## [0.4.1]
