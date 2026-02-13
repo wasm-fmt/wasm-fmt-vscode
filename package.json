@@ -81,7 +81,7 @@
 		"@wasm-fmt/dart_fmt": "^0.4.0",
 		"@wasm-fmt/gofmt": "^0.7.2",
 		"@wasm-fmt/lua_fmt": "^0.3.2",
-		"@wasm-fmt/mago_fmt": "0.6.1",
+		"@wasm-fmt/mago_fmt": "0.6.2",
 		"@wasm-fmt/markdown": "0.1.5",
 		"@wasm-fmt/ruff_fmt": "^0.15.0",
 		"@wasm-fmt/shfmt": "0.2.4",
