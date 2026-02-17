@@ -84,7 +84,7 @@
 		"@wasm-fmt/mago_fmt": "0.6.2",
 		"@wasm-fmt/markdown": "0.1.5",
 		"@wasm-fmt/ruff_fmt": "^0.15.0",
-		"@wasm-fmt/shfmt": "0.2.4",
+		"@wasm-fmt/shfmt": "0.2.5",
 		"@wasm-fmt/sql_fmt": "^0.2.1",
 		"@wasm-fmt/taplo_fmt": "0.2.5",
 		"@wasm-fmt/web_fmt": "^0.2.3",
