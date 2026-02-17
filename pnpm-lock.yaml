@@ -30,8 +30,8 @@ importers:
         specifier: ^0.15.0
         version: 0.15.1
       '@wasm-fmt/shfmt':
-        specifier: 0.2.4
-        version: 0.2.4
+        specifier: 0.2.5
+        version: 0.2.5
       '@wasm-fmt/sql_fmt':
         specifier: ^0.2.1
         version: 0.2.1
@@ -246,8 +246,8 @@ packages:
   '@wasm-fmt/ruff_fmt@0.15.1':
     resolution: {integrity: sha512-8AEJFsU40/JCec5k4Xzjgn39LP3ugNVYjA4Sh5cKfQG4NPEkOMxM6s4tTSvKEiFRqghb0bwjF5ETVjuxbAQhUQ==}
 
-  '@wasm-fmt/shfmt@0.2.4':
-    resolution: {integrity: sha512-0PTNRcbFv6iqbLyo8Ul7/tPnGJ9ScGeVM18Fs/X6gbCeiWSVLLoiq6xmzKtaJcQhW/kDgikarbsPnUCpFS7XYA==}
+  '@wasm-fmt/shfmt@0.2.5':
+    resolution: {integrity: sha512-cD3g9JReNE/svHc3UCygylvRKZd7U/dUtvyGfxbiWS8mrUPcH/7wBaQcAyjoRErEegj9V7eXMsRIeQCbPnsPug==}
     engines: {node: '>=16.17.0'}
 
   '@wasm-fmt/sql_fmt@0.2.1':
@@ -373,7 +373,7 @@ snapshots:
 
   '@wasm-fmt/ruff_fmt@0.15.1': {}
 
-  '@wasm-fmt/shfmt@0.2.4': {}
+  '@wasm-fmt/shfmt@0.2.5': {}
 
   '@wasm-fmt/sql_fmt@0.2.1': {}
 
