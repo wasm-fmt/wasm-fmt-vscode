@@ -38,9 +38,7 @@ export function formatCode(code: string, filename: string, options: vscode.Forma
 	logger.info("formatting", filename, "with options", options);
 
 	try {
-		return format(code, filename, {
-			line_width: options.tabSize * 10,
-		});
+		return format(code, filename);
 	} catch (error) {
 		logger.error("failed to format", filename, error);
 		return null;
