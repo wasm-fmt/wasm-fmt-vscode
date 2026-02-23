@@ -21,8 +21,8 @@ importers:
         specifier: ^0.3.2
         version: 0.3.2
       '@wasm-fmt/mago_fmt':
-        specifier: 0.6.3
-        version: 0.6.3
+        specifier: 0.6.4
+        version: 0.6.4
       '@wasm-fmt/markdown':
         specifier: 0.1.5
         version: 0.1.5
@@ -237,8 +237,8 @@ packages:
   '@wasm-fmt/lua_fmt@0.3.2':
     resolution: {integrity: sha512-sLhZpx/Gdz4i1WAckS/e4Z68Kw5ObSkiYPwu11PW1EodjvVCZOsb/y7/KFLTai1jzRXqEu3SUHLTU9qE3R/npw==}
 
-  '@wasm-fmt/mago_fmt@0.6.3':
-    resolution: {integrity: sha512-Yl9+9H53VuTocp/fnnlDxIk4f63YnCdI5SF7KALvdgF2ZLFX+M+Ix/OOwK0OU7UTjw6PniA9wwNKwMuaU9gP6Q==}
+  '@wasm-fmt/mago_fmt@0.6.4':
+    resolution: {integrity: sha512-uBXW6JENUYNPQ+fUbXy8VRau1fnYuHOZVv1tkMBZqstU3dmJoSs0K8yZDSuvreT9iqkQET8m1Ey5Qh/RyOPa3w==}
 
   '@wasm-fmt/markdown@0.1.5':
     resolution: {integrity: sha512-E8JHkpCfTqIcVUMkIqLzHORvYp2vIrN9HaTg0O7EyCrIQKQCRIf9pmROwlYlOWGtuQWCbMEWr2/JxsMBa9oJ5Q==}
@@ -367,7 +367,7 @@ snapshots:
 
   '@wasm-fmt/lua_fmt@0.3.2': {}
 
-  '@wasm-fmt/mago_fmt@0.6.3': {}
+  '@wasm-fmt/mago_fmt@0.6.4': {}
 
   '@wasm-fmt/markdown@0.1.5': {}
 
