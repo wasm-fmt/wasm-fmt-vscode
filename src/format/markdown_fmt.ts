@@ -143,6 +143,7 @@ const CODE_BLOCK_FORMATTERS = new FormatterRegistry()
 			"cc",
 			"cpp",
 			"c++",
+			"c#",
 			"cs",
 			"csharp",
 			"java",
@@ -154,6 +155,10 @@ const CODE_BLOCK_FORMATTERS = new FormatterRegistry()
 			"proto",
 			"verilog",
 			"systemverilog",
+			"glsl",
+			"hlsl",
+			"cuda",
+			"metal",
 		],
 		{
 			load: clang_format.load,
@@ -175,7 +180,9 @@ const CODE_BLOCK_FORMATTERS = new FormatterRegistry()
 			"typescript",
 			"ts",
 			"jsx",
+			"javascriptreact",
 			"tsx",
+			"typescriptreact",
 			"css",
 			"scss",
 			"sass",
@@ -206,43 +213,22 @@ let currentFilename: string = null!;
 
 function mapTagToFilename(tag: string): string {
 	switch (tag) {
-		case "go":
 		case "golang":
 			return `${currentFilename}.go`;
-		case "lua":
-			return `${currentFilename}.lua`;
 		case "python":
-		case "py":
 			return `${currentFilename}.py`;
-		case "zig":
-			return `${currentFilename}.zig`;
-		case "dart":
-			return `${currentFilename}.dart`;
-		case "sql":
-			return `${currentFilename}.sql`;
 		case "shell":
 		case "bash":
-		case "sh":
 		case "zsh":
 			return `${currentFilename}.sh`;
-		case "toml":
-			return `${currentFilename}.toml`;
-		case "yaml":
 		case "yml":
 			return `${currentFilename}.yaml`;
-		case "php":
-			return `${currentFilename}.php`;
-		case "c":
-			return `${currentFilename}.c`;
 		case "cc":
-		case "cpp":
 		case "c++":
 			return `${currentFilename}.cpp`;
-		case "cs":
+		case "c#":
 		case "csharp":
 			return `${currentFilename}.cs`;
-		case "java":
-			return `${currentFilename}.java`;
 		case "oc":
 		case "objective-c":
 			return `${currentFilename}.m`;
@@ -250,76 +236,48 @@ function mapTagToFilename(tag: string): string {
 		case "objective-cpp":
 		case "objective-c++":
 			return `${currentFilename}.mm`;
-		case "proto":
-			return `${currentFilename}.proto`;
 		case "verilog":
 			return `${currentFilename}.v`;
 		case "systemverilog":
 			return `${currentFilename}.sv`;
 		case "javascript":
-		case "js":
 			return `${currentFilename}.js`;
 		case "typescript":
-		case "ts":
 			return `${currentFilename}.ts`;
-		case "jsx":
+		case "javascriptreact":
 			return `${currentFilename}.jsx`;
-		case "tsx":
+		case "typescriptreact":
 			return `${currentFilename}.tsx`;
-		case "css":
-			return `${currentFilename}.css`;
-		case "scss":
-			return `${currentFilename}.scss`;
-		case "sass":
-			return `${currentFilename}.sass`;
-		case "less":
-			return `${currentFilename}.less`;
-		case "html":
-			return `${currentFilename}.html`;
-		case "vue":
-			return `${currentFilename}.vue`;
-		case "svelte":
-			return `${currentFilename}.svelte`;
-		case "astro":
-			return `${currentFilename}.astro`;
-		case "json":
-			return `${currentFilename}.json`;
-		case "jsonc":
-			return `${currentFilename}.jsonc`;
-		case "graphql":
 		case "gql":
 			return `${currentFilename}.graphql`;
 		default:
-			return currentFilename;
+			return `${currentFilename}.${tag}`;
 	}
 }
 
 function mapTagToLanguageId(tag: string): string {
 	switch (tag) {
-		case "c":
-			return "c";
 		case "cc":
-		case "cpp":
 		case "c++":
 			return "cpp";
+		case "c#":
 		case "cs":
-		case "csharp":
 			return "csharp";
-		case "java":
-			return "java";
 		case "oc":
-		case "objective-c":
 			return "objective-c";
 		case "oc++":
-		case "objective-cpp":
 		case "objective-c++":
 			return "objective-cpp";
-		case "proto":
-			return "proto";
-		case "verilog":
-			return "verilog";
-		case "systemverilog":
-			return "systemverilog";
+		case "js":
+			return "javascript";
+		case "jsx":
+			return "javascriptreact";
+		case "ts":
+			return "typescript";
+		case "tsx":
+			return "typescriptreact";
+		case "gql":
+			return "graphql";
 		default:
 			return tag;
 	}
