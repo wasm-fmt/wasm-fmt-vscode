@@ -84,7 +84,7 @@
 		"esbuild": "^0.27.3"
 	},
 	"dependencies": {
-		"@wasm-fmt/clang-format": "^21.1.8",
+		"@wasm-fmt/clang-format": "^22.0.0",
 		"@wasm-fmt/dart_fmt": "^0.4.0",
 		"@wasm-fmt/gofmt": "^0.7.2",
 		"@wasm-fmt/lua_fmt": "^0.3.2",
