@@ -1,7 +1,7 @@
 import vscode = require("vscode");
 
-import wasm from "@wasm-fmt/clang-format/clang-format.wasm";
-import initWasm, { format, format_byte_range } from "@wasm-fmt/clang-format";
+import wasm from "@wasm-fmt/clang-format/wasm";
+import { format, format_byte_range, initSync } from "@wasm-fmt/clang-format/web";
 import { utf16OffsetToUtf8 } from "../utils";
 
 let inited: Promise<void> | null = null;
@@ -24,10 +24,9 @@ export async function load() {
 	inited = new Promise((resolve, reject) => {
 		vscode.workspace.fs.readFile(wasm_uri).then(
 			(bits) => {
-				initWasm(bits).then(() => {
-					logger.info("clang-format inited");
-					resolve();
-				});
+				initSync(bits);
+				logger.info("clang-format inited");
+				resolve();
 			},
 			(error) => {
 				logger.error("failed to init clang-format", error);
