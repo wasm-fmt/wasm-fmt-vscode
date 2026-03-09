@@ -53,7 +53,7 @@ importers:
         version: 22.19.9
       '@types/vscode':
         specifier: ^1.88.0
-        version: 1.109.0
+        version: 1.110.0
       esbuild:
         specifier: ^0.27.3
         version: 0.27.3
@@ -219,8 +219,8 @@ packages:
   '@types/node@22.19.9':
     resolution: {integrity: sha512-PD03/U8g1F9T9MI+1OBisaIARhSzeidsUjQaf51fOxrfjeiKN9bLVO06lHuHYjxdnqLWJijJHfqXPSJri2EM2A==}
 
-  '@types/vscode@1.109.0':
-    resolution: {integrity: sha512-0Pf95rnwEIwDbmXGC08r0B4TQhAbsHQ5UyTIgVgoieDe4cOnf92usuR5dEczb6bTKEp7ziZH4TV1TRGPPCExtw==}
+  '@types/vscode@1.110.0':
+    resolution: {integrity: sha512-AGuxUEpU4F4mfuQjxPPaQVyuOMhs+VT/xRok1jiHVBubHK7lBRvCuOMZG0LKUwxncrPorJ5qq/uil3IdZBd5lA==}
 
   '@wasm-fmt/clang-format@22.1.0':
     resolution: {integrity: sha512-l2p82yc/XzYPmZ/KM8o15s7s+mQtDBaqHmTQ3aiZLeDk9wj/9rT9fF41cfO/339xTw3LipzpZ5vjrGyEgwRTnA==}
@@ -357,7 +357,7 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/vscode@1.109.0': {}
+  '@types/vscode@1.110.0': {}
 
   '@wasm-fmt/clang-format@22.1.0': {}
 
