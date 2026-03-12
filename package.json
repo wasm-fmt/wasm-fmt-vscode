@@ -79,7 +79,7 @@
 		"version": "node scripts/update-changelog.mjs && git add CHANGELOG.md"
 	},
 	"devDependencies": {
-		"@types/node": "^22.10.1",
+		"@types/node": "^25.0.0",
 		"@types/vscode": "^1.88.0",
 		"esbuild": "^0.27.3"
 	},
