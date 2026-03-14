@@ -40,7 +40,7 @@ importers:
         version: 0.2.5
       '@wasm-fmt/web_fmt':
         specifier: ^0.2.3
-        version: 0.2.6
+        version: 0.2.7
       '@wasm-fmt/yamlfmt':
         specifier: ^0.2.1
         version: 0.2.1
@@ -256,8 +256,8 @@ packages:
   '@wasm-fmt/taplo_fmt@0.2.5':
     resolution: {integrity: sha512-rq/sOB7aJ2a0b5OSeMJz3gjE5hAc85096bmRiFkp4LHRP3FW/rXziMF1yhEF0yeDK3YseGaL2peO3TTDeYt6HA==}
 
-  '@wasm-fmt/web_fmt@0.2.6':
-    resolution: {integrity: sha512-2ruzkK7u2NkQBQfneAWlTdsIOg5SarOzFioSWzgbexH5cS3Q1PqzghyTsw+/7AvyCED7LI4xcGgimhme33zQPQ==}
+  '@wasm-fmt/web_fmt@0.2.7':
+    resolution: {integrity: sha512-TnLoCtCfMymM3ilCIiidjfweQEj01dldjXrOLjczzwa030o+QX7Zh1kANOo8681+cY6grJsuUmRLh/6ZbI+8Zw==}
 
   '@wasm-fmt/yamlfmt@0.2.1':
     resolution: {integrity: sha512-uU+0fE8CugN8kVUjIy+hrYyH3V00Yin7u1noNuTVjnSRXfpNrQ6bgH61I7T8r8JMe62G883Z26YkNpB3Jjsq6w==}
@@ -379,7 +379,7 @@ snapshots:
 
   '@wasm-fmt/taplo_fmt@0.2.5': {}
 
-  '@wasm-fmt/web_fmt@0.2.6': {}
+  '@wasm-fmt/web_fmt@0.2.7': {}
 
   '@wasm-fmt/yamlfmt@0.2.1': {}
 
