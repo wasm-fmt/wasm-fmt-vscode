@@ -34,7 +34,7 @@ importers:
         version: 0.2.6
       '@wasm-fmt/sql_fmt':
         specifier: ^0.2.1
-        version: 0.2.1
+        version: 0.2.2
       '@wasm-fmt/taplo_fmt':
         specifier: 0.2.5
         version: 0.2.5
@@ -250,8 +250,8 @@ packages:
     resolution: {integrity: sha512-n141PyeTqKDTOqPEgSFBo0K0JWAG2FOTa6OojJVkoYUg5NY51/A+eZI7U0eGC5XExUlIV9Tu+D4UGjfr8XyXtQ==}
     engines: {node: '>=16.17.0'}
 
-  '@wasm-fmt/sql_fmt@0.2.1':
-    resolution: {integrity: sha512-3dBApOq0a4rwS1uR/GruC3YEUMtQqhNh5+E3v1q4EU/PduQwNNvCaiZZ42eqESv3l2/uwd4OIx/gBr3uoY4TfA==}
+  '@wasm-fmt/sql_fmt@0.2.2':
+    resolution: {integrity: sha512-XY8UPYqKFaZ3Jhg113p6gleL4mJN1NfNtIfIha+Uz53fYWP4O8XyzrU8HVlHpV8iIzgmKQqJosNYpqdvG2OFaw==}
 
   '@wasm-fmt/taplo_fmt@0.2.5':
     resolution: {integrity: sha512-rq/sOB7aJ2a0b5OSeMJz3gjE5hAc85096bmRiFkp4LHRP3FW/rXziMF1yhEF0yeDK3YseGaL2peO3TTDeYt6HA==}
@@ -375,7 +375,7 @@ snapshots:
 
   '@wasm-fmt/shfmt@0.2.6': {}
 
-  '@wasm-fmt/sql_fmt@0.2.1': {}
+  '@wasm-fmt/sql_fmt@0.2.2': {}
 
   '@wasm-fmt/taplo_fmt@0.2.5': {}
 
