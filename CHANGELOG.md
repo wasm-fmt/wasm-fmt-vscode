@@ -4,6 +4,12 @@ All notable changes to the "wasm-fmt" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [Unreleased]
+
+### Changed
+
+- Bump formatter, build, and toolchain dependencies.
+
 ## [0.6.1]
 
 ### Fixed
