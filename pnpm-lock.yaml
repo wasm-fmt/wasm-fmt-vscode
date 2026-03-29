@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@wasm-fmt/clang-format':
         specifier: ^22.0.0
-        version: 22.1.1
+        version: 22.1.2
       '@wasm-fmt/dart_fmt':
         specifier: ^0.4.0
         version: 0.4.0
@@ -222,8 +222,8 @@ packages:
   '@types/vscode@1.109.0':
     resolution: {integrity: sha512-0Pf95rnwEIwDbmXGC08r0B4TQhAbsHQ5UyTIgVgoieDe4cOnf92usuR5dEczb6bTKEp7ziZH4TV1TRGPPCExtw==}
 
-  '@wasm-fmt/clang-format@22.1.1':
-    resolution: {integrity: sha512-W2Svu8OZBO5+OeUCczcAwJS132bKRmeQy87d4IigBEQVDemvBzxcx4axFf6bbGA6Pkli0A107EiUr3Vql4SrzQ==}
+  '@wasm-fmt/clang-format@22.1.2':
+    resolution: {integrity: sha512-YyqhaT9PekMQB2yBCF5qJ934nayXbnaZsEuyHCCFw7dKd1kFHB9VxVjFaj2xvu9oM9m/a9x6P2NV1HCTY0gUiA==}
     engines: {node: '>=16.17.0'}
     hasBin: true
 
@@ -359,7 +359,7 @@ snapshots:
 
   '@types/vscode@1.109.0': {}
 
-  '@wasm-fmt/clang-format@22.1.1': {}
+  '@wasm-fmt/clang-format@22.1.2': {}
 
   '@wasm-fmt/dart_fmt@0.4.0': {}
 
