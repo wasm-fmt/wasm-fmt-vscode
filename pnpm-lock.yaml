@@ -28,7 +28,7 @@ importers:
         version: 0.1.6
       '@wasm-fmt/ruff_fmt':
         specifier: ^0.15.0
-        version: 0.15.10
+        version: 0.15.11
       '@wasm-fmt/shfmt':
         specifier: 0.2.7
         version: 0.2.7
@@ -243,8 +243,8 @@ packages:
   '@wasm-fmt/markdown@0.1.6':
     resolution: {integrity: sha512-YSMazxBs35vn50ClvfXYu76PXiPCpDM3BElcitJ6RF7aGOw7ohIkv0Jb6afvpH2ePaJYwwUtE4MdNwiTVn0bCA==}
 
-  '@wasm-fmt/ruff_fmt@0.15.10':
-    resolution: {integrity: sha512-QTYjQaIfLj1uWI/KroMnrIvr+P4RgSSJo7QyTfoX8eo1q9TS7m3pL4rWGY5ToY0IKkDfnRcoFNVoaWppaDtnvg==}
+  '@wasm-fmt/ruff_fmt@0.15.11':
+    resolution: {integrity: sha512-+FryElMP/v7zL4ZMSHplBOopgPgFrpNFte0quI7wQX4qnJTUvi9f2nTVwlac7hPlkBgTWvQz1kSQkNh9byWC9w==}
 
   '@wasm-fmt/shfmt@0.2.7':
     resolution: {integrity: sha512-bxmf5pXBHe3ujjc2iEoXqRXKgrQmR44jHLZ9G5BsKsb5moDWsuqsISs+88Ov9/SAI88caXYIsP02U4c4YDQpIQ==}
@@ -371,7 +371,7 @@ snapshots:
 
   '@wasm-fmt/markdown@0.1.6': {}
 
-  '@wasm-fmt/ruff_fmt@0.15.10': {}
+  '@wasm-fmt/ruff_fmt@0.15.11': {}
 
   '@wasm-fmt/shfmt@0.2.7': {}
 
