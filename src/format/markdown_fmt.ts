@@ -101,7 +101,7 @@ const CODE_BLOCK_FORMATTERS = new FormatterRegistry()
 		format: (code, tag, options) => ruff_fmt.formatCode(code, mapTagToFilename(tag), options),
 	})
 	// Zig
-	.register("zig", ["zig"], {
+	.register("zig", ["zig", "zon"], {
 		load: zig_fmt.load,
 		format: (code, tag, options) => zig_fmt.formatCode(code, mapTagToFilename(tag), options),
 	})

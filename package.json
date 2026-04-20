@@ -69,7 +69,8 @@
 		"onLanguage:verilog",
 		"onLanguage:vue",
 		"onLanguage:yaml",
-		"onLanguage:zig"
+		"onLanguage:zig",
+		"onLanguage:zon"
 	],
 	"browser": "./out/extension.js",
 	"scripts": {
