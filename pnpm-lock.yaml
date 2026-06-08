@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@wasm-fmt/clang-format':
         specifier: ^22.0.0
-        version: 22.1.6
+        version: 22.1.7
       '@wasm-fmt/dart_fmt':
         specifier: ^0.4.0
         version: 0.4.0
@@ -426,8 +426,8 @@ packages:
     engines: {node: '>= 20'}
     hasBin: true
 
-  '@wasm-fmt/clang-format@22.1.6':
-    resolution: {integrity: sha512-IZjt4xcksl6hl59JfGy7YVH1uZAj8otXStAyad4nK+LiRRRdGQi3ZEph4e+fZ0W65lvMlJb8+EGtRFJJaMG7WQ==}
+  '@wasm-fmt/clang-format@22.1.7':
+    resolution: {integrity: sha512-nq3v7UcZnANCXmrxInOfQxySoSfbalcrMiG9VHxa6OMW5AR1ZHggm9jWRlCJOpLrmt5R1l+IxyHzRU7+NeU6QA==}
     engines: {node: '>=16.17.0'}
     hasBin: true
 
@@ -1782,7 +1782,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@wasm-fmt/clang-format@22.1.6': {}
+  '@wasm-fmt/clang-format@22.1.7': {}
 
   '@wasm-fmt/dart_fmt@0.4.0': {}
 
