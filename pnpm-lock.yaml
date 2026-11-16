@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@wasm-fmt/clang-format':
         specifier: ^22.0.0
-        version: 22.1.6
+        version: 22.1.8
       '@wasm-fmt/dart_fmt':
         specifier: ^0.4.0
         version: 0.4.0
@@ -329,6 +329,7 @@ packages:
   '@secretlint/secretlint-rule-preset-recommend@10.2.2':
     resolution: {integrity: sha512-K3jPqjva8bQndDKJqctnGfwuAxU2n9XNCPtbXVI5JvC7FnQiNg/yWlQPbMUlBXtBoBGFYp08A94m6fvtc9v+zA==}
     engines: {node: '>=20.0.0'}
+    deprecated: Built into secretlint v14 and later. Remove this package; the rule id still works. https://github.com/secretlint/secretlint/blob/HEAD/docs/rules/preset-recommend.md
 
   '@secretlint/source-creator@10.2.2':
     resolution: {integrity: sha512-h6I87xJfwfUTgQ7irWq7UTdq/Bm1RuQ/fYhA3dtTIAop5BwSFmZyrchph4WcoEvbN460BWKmk4RYSvPElIIvxw==}
@@ -426,8 +427,8 @@ packages:
     engines: {node: '>= 20'}
     hasBin: true
 
-  '@wasm-fmt/clang-format@22.1.6':
-    resolution: {integrity: sha512-IZjt4xcksl6hl59JfGy7YVH1uZAj8otXStAyad4nK+LiRRRdGQi3ZEph4e+fZ0W65lvMlJb8+EGtRFJJaMG7WQ==}
+  '@wasm-fmt/clang-format@22.1.8':
+    resolution: {integrity: sha512-MuDkCzEUmBCuC3MQcZGrJ8lI4MnDpwCuN63EMRpr/c0urCEq1S4E8qVddMjRf+Lrcl2gEZH+kKTWpXC2c7x+Zg==}
     engines: {node: '>=16.17.0'}
     hasBin: true
 
@@ -1782,7 +1783,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@wasm-fmt/clang-format@22.1.6': {}
+  '@wasm-fmt/clang-format@22.1.8': {}
 
   '@wasm-fmt/dart_fmt@0.4.0': {}
 
